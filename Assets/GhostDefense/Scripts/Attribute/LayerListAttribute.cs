@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
-public class LayerListAttribute : PropertyAttribute
+namespace UHUY.GhostDefense.Editor
 {
+    public class LayerListAttribute : PropertyAttribute
+    {
 
 
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System;
 
-namespace UDEV
+namespace UHUY.GhostDefense.Editor
 {
     [System.Serializable]
     public class AnimState

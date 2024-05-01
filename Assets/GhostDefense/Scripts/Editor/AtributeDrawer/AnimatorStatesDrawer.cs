@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace UDEV
+namespace UHUY.GhostDefense.Editor
 {
     [CustomPropertyDrawer(typeof(AnimatorStatesAttribute), true)]
     public class AnimatorStatesDrawer : PropertyDrawer

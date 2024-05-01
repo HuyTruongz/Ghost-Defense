@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UDEV;
 
-namespace UDEV.GhostDefense
+namespace UHUY.GhostDefense
 {
     public class AudioController : Singleton<AudioController>
     {

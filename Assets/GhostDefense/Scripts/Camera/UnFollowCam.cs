@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnFollowCam : MonoBehaviour
+namespace UHUY.GhostDefense
 {
-    Vector3 m_startingPos;
-
-    private void Awake()
+    public class UnFollowCam : MonoBehaviour
     {
-        m_startingPos = transform.position;   
+        Vector3 m_startingPos;
+
+        private void Awake()
+        {
+            m_startingPos = transform.position;
+        }
+
+        private void Update()
+        {
+            transform.position = m_startingPos;
+        }
     }
 
-    private void Update()
-    {
-        transform.position = m_startingPos;
-    }
 }
