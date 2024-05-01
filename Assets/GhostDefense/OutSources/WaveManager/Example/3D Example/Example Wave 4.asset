@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8316f0baf4a1c3d468343adf9d706e81, type: 3}
+  m_Name: Example Wave 4
+  m_EditorClassIdentifier: 
+  elements:
+  - behaviour: 1
+    enemy: {fileID: 0}
+    enemySet: {fileID: 11400000, guid: a792d1b44555ba247b5a77df8186738e, type: 2}
+    randomEnemy: 1
+    bulkElements: 50
+    useTimeRange: 1
+    time: 0
+    timeRange: {x: 0.2, y: 0.5}
+    vis: 1
+  icon: {fileID: 2800000, guid: e5e56e49e68cea7439232476af8930f0, type: 3}
