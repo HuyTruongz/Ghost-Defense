@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2468815972939820011}
   - component: {fileID: -2031673875345038751}
   - component: {fileID: -402087238459579707}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4427286211121211692}
   - component: {fileID: 7480611163268923617}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}

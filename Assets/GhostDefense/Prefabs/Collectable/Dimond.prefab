@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8959163056985709868}
   - component: {fileID: 3420428040254769306}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6457275478741117784}
   - component: {fileID: -6891925020640322512}
   - component: {fileID: -6033923744049361074}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dimond
   m_TagString: Untagged
   m_Icon: {fileID: 0}

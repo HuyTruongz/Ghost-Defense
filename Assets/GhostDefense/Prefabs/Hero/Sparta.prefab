@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5614801301333661235}
   - component: {fileID: 8088339561797902878}
   - component: {fileID: 7339444125693482459}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sparta
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 768207197061149508}
   - component: {fileID: 4689438505145119858}
   - component: {fileID: 4876500097095350862}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
