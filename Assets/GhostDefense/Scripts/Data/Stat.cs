@@ -19,6 +19,6 @@ namespace UHUY.GhostDefense
 
         public abstract bool IsMaxLevel();
 
-        public abstract void ToJon();
+        public abstract string ToJon();
     }
 }
