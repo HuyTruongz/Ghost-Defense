@@ -61,6 +61,11 @@ namespace UHUY.GhostDefense
 
         }
 
+        public virtual void UpgradeCore()
+        {
+
+        }
+
         public virtual void UpgradeToMax()
         {
 

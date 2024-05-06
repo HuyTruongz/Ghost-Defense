@@ -12,11 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a687c1190975d58448d0daab9a88c876, type: 3}
   m_Name: Sparta
   m_EditorClassIdentifier: 
-  id: 
-  thumb: {fileID: 0}
-  hp: 0
-  damage: 0
-  moveSpeed: 0
-  knockbackForce: 0
-  knockbackTime: 0
-  invincibleTime: 0
+  id: 171498944551907377174
+  thumb: {fileID: 2750298860172458669, guid: 23583109680bbf740b3857e64e6bc2ab, type: 3}
+  hp: 40
+  damage: 3
+  moveSpeed: 4.2
+  knockbackForce: 5
+  knockbackTime: 0.2
+  invincibleTime: 0.5
+  runSp: 5
+  atkRate: 0.1
+  dashRate: 0.1
+  dashDist: 3
+  ultiEnegry: 40
+  defense: 0.4
+  luck: 0.4
+  maxLevel: 50
+  level: 1
+  playerLevel: 1
+  xp: 0
+  lvUpXpRequired: 50
+  point: 0
+  xpUpRate: 20
+  hpUpRate: 10
+  dmgUpRate: 1.5
+  defUpRate: 1.5
+  luckUpRate: 0.3
+  pointUpRate: 5
+  pointRequired: 2
+  pointRequiredUp: 5

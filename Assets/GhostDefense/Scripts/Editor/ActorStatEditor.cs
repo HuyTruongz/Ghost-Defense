@@ -59,7 +59,7 @@ namespace UHUY.GhostDefense.Editor
 
         private void Upgrade()
         {
-            m_target.Upgrade();
+            m_target.UpgradeCore();
         }
 
         public virtual void Load(string fileName)
