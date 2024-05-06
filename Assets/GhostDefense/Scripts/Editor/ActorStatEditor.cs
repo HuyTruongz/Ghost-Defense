@@ -57,7 +57,7 @@ namespace UHUY.GhostDefense.Editor
             m_target.UpgradeToMax();
         }
 
-        private void Upgrade()
+        public virtual void Upgrade()
         {
             m_target.UpgradeCore();
         }

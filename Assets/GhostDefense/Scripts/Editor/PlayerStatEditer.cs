@@ -9,7 +9,7 @@ using System;
 namespace UHUY.GhostDefense
 {
     [CanEditMultipleObjects]
-    [CustomEditor(typeof(PlayerStat))]
+    [CustomEditor(typeof(PlayerStat), editorForChildClasses: true)]
     public class PlayerStatEditer : ActorStatEditor
     {
         public override void OnInspectorGUI()
