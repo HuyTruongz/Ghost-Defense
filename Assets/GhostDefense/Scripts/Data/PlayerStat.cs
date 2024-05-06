@@ -141,8 +141,9 @@ namespace UHUY.GhostDefense
             if(!IsMaxLevel() && point >= pointRequired)
             {
                 UpgradeCore();
+                Save(GameData.Ins.curPlayerId);
 
-                if(Success != null)
+                if (Success != null)
                 {
                     Success.Invoke();
                 }
@@ -172,7 +173,6 @@ namespace UHUY.GhostDefense
             defense = Mathf.Clamp(defense, 0, MaxDef);
             luck = Mathf.Clamp(luck, 0f, 1f);
 
-            //Save(GameData.Ins.curPlayerId);
         }
 
         public override void UpgradeToMax()
@@ -203,7 +203,7 @@ namespace UHUY.GhostDefense
                     OnLevelUp.Invoke();
                 }
 
-                //Save(GameData.Ins.curLevelId);
+                Save(GameData.Ins.curLevelId);
 
                 yield return new WaitForSeconds(0.5f);
             }
