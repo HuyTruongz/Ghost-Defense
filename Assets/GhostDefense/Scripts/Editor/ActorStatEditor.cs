@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using System;
 using System.IO;
+using System.Linq;
 
 namespace UHUY.GhostDefense.Editor
 {
@@ -14,17 +15,19 @@ namespace UHUY.GhostDefense.Editor
     {
         protected ActorStat m_target;
         protected string m_fileName;
-        private string path = string.Empty;
+        private string m_path = string.Empty;
+        private string m_filePath = string.Empty;
 
         public override void OnInspectorGUI()
         {
             m_target = (ActorStat)target;
-            path = Application.dataPath + "/Editor/Resources/StatData";
+            m_path = Application.dataPath + "/Editor/Resources/StatData";
             m_target.thumb = (Sprite)EditorGUILayout.ObjectField(
                 m_target.thumb, typeof(Sprite),false, GUILayout.Width(80), GUILayout.Height(80));
             base.OnInspectorGUI();
 
             m_fileName = $"actor_data_{m_target.id}";
+            m_filePath = $"{m_path}/{m_fileName}.txt";
 
             if (GUILayout.Button("Save"))
             {
@@ -71,19 +74,33 @@ namespace UHUY.GhostDefense.Editor
             }
         }
 
-        public virtual void Save()
+        private void CreateFilepath()
         {
-            string filePath = $"{path}/{m_fileName}.txt";
-            if (File.Exists(filePath))
-            {
-                File.Delete(filePath);
-            }
             m_target.id = Helper.GenerateUID();
             m_fileName = $"actor_data_{m_target.id}";
+            m_filePath = $"{m_path}/{m_fileName}.txt";
+        }
 
-            filePath = $"{path}/{m_fileName}.txt";
-            File.WriteAllText(filePath, m_target.ToJon());
+        public virtual void Save()
+        {
+            if(IsDupplicateId(m_target.id) || string.IsNullOrEmpty(m_target.id))
+            {
+                CreateFilepath();
+            }
+            File.WriteAllText(m_filePath, m_target.ToJon());
             AssetDatabase.Refresh();
+        }
+
+        private bool IsDupplicateId(string id)
+        {
+            var data = Resources.LoadAll<ActorStat>("Data");
+            var finder = data.Where(d => string.Compare(d.id, id) == 0);
+            if (finder == null) return false;
+
+            var rs = finder.ToArray();
+            if(rs == null|| rs.Length == 0 ) return false;
+
+            return rs.Length > 1;
         }
     }
 }
