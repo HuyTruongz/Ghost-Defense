@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a687c1190975d58448d0daab9a88c876, type: 3}
+  m_Name: Wizard
+  m_EditorClassIdentifier: 
+  id: 1715063134727539854358
+  thumb: {fileID: 21300000, guid: 367afc69e77d4fc44bd36704d2b7ce1c, type: 3}
+  hp: 30
+  damage: 2
+  moveSpeed: 4.2
+  knockbackForce: 5
+  knockbackTime: 0.2
+  invincibleTime: 0.5
+  runSp: 5
+  atkRate: 0.1
+  dashRate: 0.1
+  dashDist: 3
+  ultiEnegry: 30
+  defense: 0.2
+  luck: 0.4
+  maxLevel: 50
+  level: 1
+  playerLevel: 1
+  xp: 0
+  lvUpXpRequired: 60
+  point: 0
+  xpUpRate: 35
+  hpUpRate: 10
+  dmgUpRate: 1.5
+  defUpRate: 1.5
+  luckUpRate: 0.4
+  pointUpRate: 5
+  pointRequired: 2
+  pointRequiredUp: 5

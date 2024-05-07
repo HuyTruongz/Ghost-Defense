@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16491fa6deb7781419a6b87e5b77ac93, type: 3}
-  m_Name: AI Stat
+  m_Name: Boss Stat
   m_EditorClassIdentifier: 
   id: 171500171422514734408
   thumb: {fileID: 0}
-  hp: 5
-  damage: 2
+  hp: 50
+  damage: 8
   moveSpeed: 3
   knockbackForce: 8
   knockbackTime: 0.2
   invincibleTime: 0.35
   atkRate: 1
   dashRate: 0.15
-  ultiRate: 0.03
+  ultiRate: 0.2
   atkTime: 1
   ultiTime: 5
   dashTime: 4
-  minXpBouns: 3
-  maxXpBouns: 10
-  minEnergyBouns: 5
-  maxEnergyBouns: 15
-  hpUpRate: 5
-  dmgUpRate: 5
-  ultiUpRate: 0.2
+  minXpBouns: 10
+  maxXpBouns: 50
+  minEnergyBouns: 10
+  maxEnergyBouns: 25
+  hpUpRate: 50
+  dmgUpRate: 30
+  ultiUpRate: 0.8

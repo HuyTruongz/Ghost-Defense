@@ -8,9 +8,9 @@ namespace UHUY.GhostDefense
     public class ActorStat : Stat
     {
 #if UNITY_EDITOR
-        //[HideInInspector]
+        [HideInInspector]
         public string id;
-        //[HideInInspector]
+        [HideInInspector]
         public Sprite thumb;
 #endif
         [Header("Base Stats:")]
