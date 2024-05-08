@@ -4,7 +4,7 @@ using UDEV;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace UHUY.GhostDefense
+namespace UDEV.GhostDefense
 {
     public class SceneController : Singleton<SceneController>
     {

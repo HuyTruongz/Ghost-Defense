@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace UHUY.GhostDefense.Editor
+namespace UDEV.GhostDefense.Editor
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(AIStat), editorForChildClasses: true)]

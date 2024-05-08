@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UDEV;
 using UnityEngine;
 
-namespace UHUY.GhostDefense
+namespace UDEV.GhostDefense
 {
     public class GamepadManager : Singleton<GamepadManager>
     {

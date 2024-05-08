@@ -6,7 +6,7 @@ using System;
 using System.IO;
 using System.Linq;
 
-namespace UHUY.GhostDefense.Editor
+namespace UDEV.GhostDefense.Editor
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(ActorStat),editorForChildClasses: true)]

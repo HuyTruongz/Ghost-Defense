@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UHUY.GhostDefense
+namespace UDEV.GhostDefense
 {
     public class Dialog : MonoBehaviour
     {

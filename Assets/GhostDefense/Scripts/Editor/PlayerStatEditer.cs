@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UHUY.GhostDefense.Editor;
+using UDEV.GhostDefense.Editor;
 using UnityEngine;
 using UnityEditor;
 using System;
 
 
-namespace UHUY.GhostDefense
+namespace UDEV.GhostDefense
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(PlayerStat), editorForChildClasses: true)]

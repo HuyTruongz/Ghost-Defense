@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UHUY.GhostDefense
+namespace UDEV.GhostDefense
 {
     [CreateAssetMenu(fileName = "Player Stat", menuName = "Stats/Player")]
     public class PlayerStat : ActorStat

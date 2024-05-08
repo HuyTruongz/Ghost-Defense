@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UHUY.GhostDefense
+namespace UDEV.GhostDefense
 {
     public static class Pref
     {

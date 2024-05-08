@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace UHUY.GhostDefense.Editor
+namespace UDEV.GhostDefense.Editor
 {
     [CustomPropertyDrawer(typeof(LayerListAttribute), true)]
     public class LayerListDrawer : PropertyDrawer

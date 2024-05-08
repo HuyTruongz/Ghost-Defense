@@ -4,7 +4,7 @@ using UDEV;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace UHUY.GhostDefense
+namespace UDEV.GhostDefense
 {
     public class GameData : Singleton<GameData>
     {
