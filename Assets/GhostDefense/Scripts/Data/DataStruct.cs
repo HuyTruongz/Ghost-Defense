@@ -42,6 +42,7 @@ public enum PlayerSate
     Dead,
     Attack,
     Ultimate,
+    GotHit,
     Dash
 }
 

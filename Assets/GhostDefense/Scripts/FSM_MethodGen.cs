@@ -20,16 +20,16 @@ public static class FSM_MethodGen
                 string stateName = A.GetValue(i).ToString();
 
                  methods +=
-                    "void " + stateName + "_Enter() { } \n" +
-                    "void " + stateName + "_Update() { } \n";
+                    "private void " + stateName + "_Enter() { } \n" +
+                    "private void " + stateName + "_Update() { } \n";
 
                 if(hasFixedUpdate)
-                    methods += "void " + stateName + "_FixedUpdate() { } \n";
+                    methods += "private void " + stateName + "_FixedUpdate() { } \n";
 
-                methods += "void " + stateName + "_Exit() { } \n";
+                methods += "private void " + stateName + "_Exit() { } \n";
 
                 if(hasFinally)
-                    methods += "void " + stateName + "_Finally() { } \n";
+                    methods += "private void " + stateName + "_Finally() { } \n";
             }
 
             File.WriteAllText(m_savePath, methods);
