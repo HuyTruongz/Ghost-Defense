@@ -78,11 +78,9 @@ namespace UDEV.GhostDefense
 
         private void LoadStat()
         {
-            if (m_curStat)
-            {
-                m_curStat.Load(GameData.Ins.curPlayerId);
-            }
+            if (!m_curStat) return;
 
+            m_curStat.Load(GameData.Ins.curPlayerId);
             m_curSpeed = m_curStat.moveSpeed;
             m_curHp = m_curStat.hp;
             m_curDmg = m_curStat.damage;
