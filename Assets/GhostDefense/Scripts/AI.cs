@@ -66,6 +66,31 @@ public class AI : Actor
         Init();
     }
 
+    private void Update()
+    {
+        ActionHandle();
+    }
+
+    private void ActionHandle()
+    {
+        if (IsAtking || IsDashing || m_isKnockBack || IsDead || m_player.IsDead) return;
+
+        GetTargetDir();
+        if (CanAction)
+        {
+            ActionSwitch();
+        }
+
+        if (m_targetDir.x > 0)
+        {
+            Flip(Direction.Right);
+        }
+        else
+        {
+            Flip(Direction.Left);
+        }
+    }
+
     protected void FSMInit(MonoBehaviour behaviour)
     {
         m_fsm = StateMachine<AIState>.Initialize(behaviour);
@@ -103,6 +128,32 @@ public class AI : Actor
     private void GetActionRate()
     {
         m_actionRate = UnityEngine.Random.Range(0f, 1f);
+    }
+
+    protected void ActionSwitch()
+    {
+        if(m_actionRate <= m_curStat.dashRate && m_actionRate > m_curStat.CurUltiRate)
+        {
+            if (m_isDashed) return;
+
+            float randCheck = UnityEngine.Random.Range(0f, 1f);
+            if(randCheck <= 0.5f)
+            {
+                ChangState(AIState.Dash1);
+            }
+            else
+            {
+                ChangState(AIState.Dash2);
+            }
+            m_isDashed = true;
+        }
+        else if (m_actionRate <= m_curStat.atkRate)
+        {
+            if (m_isAtked) return;
+
+            m_isAtked = true;
+            ChangState(AIState.Attack);
+        }
     }
 
     public void ChangState(AIState state)
@@ -198,4 +249,33 @@ public class AI : Actor
     private void Dead_Exit() { }
 
     #endregion
+
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position,
+            new Vector3(
+            transform.position.x + ultiDist,
+            transform.position.y,
+            transform.position.z)
+            );
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position,
+           new Vector3(
+           transform.position.x + dashDist,
+           transform.position.y,
+           transform.position.z)
+           );
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position,
+           new Vector3(
+           transform.position.x + actionDist,
+           transform.position.y,
+           transform.position.z)
+           );
+    }
 }

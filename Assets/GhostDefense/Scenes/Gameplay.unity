@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5806248588766585415, guid: 558cb32c22d33cb4094bd185197e63af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.03
       objectReference: {fileID: 0}
     - target: {fileID: 5806248588766585415, guid: 558cb32c22d33cb4094bd185197e63af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -218,9 +218,9 @@ MonoBehaviour:
   deadVfxPool: 
   IsBoss: 0
   bossStat: {fileID: 0}
-  actionDist: 0
-  ultiDist: 0
-  dashDist: 0
+  actionDist: 1.5
+  ultiDist: 4.5
+  dashDist: 1.5
 --- !u!1 &119124735
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +498,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2473592348283983108, guid: a100a4f500c13664d8bef9050e7bb556, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2473592348283983108, guid: a100a4f500c13664d8bef9050e7bb556, type: 3}
       propertyPath: m_LocalPosition.y
