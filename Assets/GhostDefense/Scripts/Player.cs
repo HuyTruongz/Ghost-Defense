@@ -106,10 +106,22 @@ namespace UDEV.GhostDefense
             }
             else
             {
-
+                if (GamepaConreoller.Ins.CanAttack)
+                {
+                    if (!m_isAttacked)
+                    {
+                        m_isAttacked = true;
+                        ChangState(PlayerSate.Attack);
+                    }
+                }
+                else if(GamepaConreoller.Ins.CanUlti && m_curEnergy >= m_curStat.ultiEnegry)
+                {
+                    ChangState(PlayerSate.Ultimate);
+                }
             }
 
             ReduceActionRate(ref m_isDashed,ref m_curDashRate,ref m_curStat.dashRate);
+            ReduceActionRate(ref m_isAttacked,ref m_curAttackRate,ref m_curStat.atkRate);
 
         }
 
@@ -297,14 +309,22 @@ namespace UDEV.GhostDefense
         }
         private void Run_FixedUpdate() { }
         private void Run_Exit() { }
-        private void Dead_Enter() { }
+        private void Dead_Enter()
+        {
+            ActiveCol(PlayerCollider.Dead);
+            //Shake (Rung) camera
+        }
         private void Dead_Update()
         {
+            gameObject.layer = deadLayer;
             Helper.PlayAnim(m_amin, PlayerSate.Dead.ToString());
         }
         private void Dead_FixedUpdate() { }
         private void Dead_Exit() { }
-        private void Attack_Enter() { }
+        private void Attack_Enter()
+        {
+            ChangeStatDalay(PlayerSate.Idle);
+        }
         private void Attack_Update()
         {
             Helper.PlayAnim(m_amin, PlayerSate.Attack.ToString());
@@ -313,18 +333,38 @@ namespace UDEV.GhostDefense
         private void Attack_Exit() { }
         private void Ultimate_Enter()
         {
+            m_curEnergy -= m_curStat.ultiEnegry;
+            m_curDmg = m_curStat.damage + m_curStat.damage * 0.3f;
+            ChangeStatDalay(PlayerSate.Idle);
+        }
+        private void Ultimate_Update()
+        {
             Helper.PlayAnim(m_amin, PlayerSate.Ultimate.ToString());
         }
-        private void Ultimate_Update() { }
         private void Ultimate_FixedUpdate() { }
-        private void Ultimate_Exit() { }
-        private void GotHit_Enter() { }
+        private void Ultimate_Exit()
+        {
+            m_curDmg = m_curStat.damage;
+        }
+        private void GotHit_Enter()
+        {
+            AIStat aiStat = (AIStat)m_whoHit.stat;
+            AddEnergy(aiStat.EnergyBouns / 5);
+        }
         private void GotHit_Update()
         {
+            KnockBackMove(0.2f);
+            if (!m_isKnockBack)
+            {
+                ChangState(PlayerSate.Idle);
+            }
             Helper.PlayAnim(m_amin, PlayerSate.GotHit.ToString());
         }
         private void GotHit_FixedUpdate() { }
-        private void GotHit_Exit() { }
+        private void GotHit_Exit()
+        {
+            
+        }
         private void Dash_Enter()
         {
             gameObject.layer = invincibleLayer;
