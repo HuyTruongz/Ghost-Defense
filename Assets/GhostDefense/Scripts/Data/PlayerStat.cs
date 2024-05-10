@@ -9,7 +9,7 @@ namespace UDEV.GhostDefense
     public class PlayerStat : ActorStat
     {
         [Header("Ability:")]
-        public float runSp;
+        public float runSeed;
         public float atkRate;
         public float dashRate;
         public float dashDist;

@@ -36,7 +36,7 @@ public enum GameState
 
 public enum PlayerSate
 {
-    Idel,
+    Idle,
     Walk,
     Run,
     Dead,

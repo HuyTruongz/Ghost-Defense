@@ -20,7 +20,7 @@ MonoBehaviour:
   knockbackForce: 5
   knockbackTime: 0.2
   invincibleTime: 0.5
-  runSp: 5
+  runSeed: 5
   atkRate: 0.1
   dashRate: 0.1
   dashDist: 3

@@ -22,6 +22,10 @@ private void Ultimate_Enter() { }
 private void Ultimate_Update() { } 
 private void Ultimate_FixedUpdate() { } 
 private void Ultimate_Exit() { } 
+private void GotHit_Enter() { } 
+private void GotHit_Update() { } 
+private void GotHit_FixedUpdate() { } 
+private void GotHit_Exit() { } 
 private void Dash_Enter() { } 
 private void Dash_Update() { } 
 private void Dash_FixedUpdate() { } 

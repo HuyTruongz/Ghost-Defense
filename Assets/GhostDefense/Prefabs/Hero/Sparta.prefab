@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5614801301333661235}
   - component: {fileID: 8088339561797902878}
   - component: {fileID: 7339444125693482459}
+  - component: {fileID: 3542118346805177980}
   m_Layer: 6
   m_Name: Sparta
   m_TagString: Player
@@ -62,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &5614801301333661235
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,6 +179,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5284793, y: 0.40010446}
   m_EdgeRadius: 0
+--- !u!114 &3542118346805177980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3249744400175336442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 496a6c29c594b544a8c225dced78f55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 1
+  stat: {fileID: 11400000, guid: 1c5d4a1ab9cce014d928561fec2813f3, type: 2}
+  normalLayer: 0
+  invincibleLayer: 0
+  deadLayer: 0
+  m_amin: {fileID: 4876500097095350862}
+  healthBarPool: 
+  hpBarOffset: {x: 0, y: 0, z: 0}
+  hpBarScale: {x: 1, y: 1, z: 1}
+  flashVfx: {fileID: 0}
+  deadVfxPool: 
+  headCol: {fileID: 0}
+  bodyCol: {fileID: 0}
+  deadCol: {fileID: 0}
 --- !u!1 &8080299335570305866
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +216,7 @@ GameObject:
   - component: {fileID: 768207197061149508}
   - component: {fileID: 4689438505145119858}
   - component: {fileID: 4876500097095350862}
+  - component: {fileID: 543524124573399149}
   m_Layer: 6
   m_Name: Graphic
   m_TagString: Untagged
@@ -284,3 +312,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &543524124573399149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8080299335570305866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c61b86246f0e864faeb9fb8a0bab937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: {fileID: 3542118346805177980}
+  weapon: {fileID: 0}

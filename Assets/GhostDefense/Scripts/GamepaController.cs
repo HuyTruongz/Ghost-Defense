@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace UDEV.GhostDefense
 {
-    public class GamepadManager : Singleton<GamepadManager>
+    public class GamepaConreoller : Singleton<GamepaConreoller>
     {
         public Joystick joystick;
         private bool m_canMoveLeft;

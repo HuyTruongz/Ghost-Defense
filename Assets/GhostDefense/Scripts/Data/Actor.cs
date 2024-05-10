@@ -197,6 +197,7 @@ namespace UDEV.GhostDefense
                             transform.localScale.x * -1,
                             transform.localScale.y,
                             transform.localScale.z);
+                        m_isFacingLeft = false;
                     }
                     break;
                 case Direction.Top:
