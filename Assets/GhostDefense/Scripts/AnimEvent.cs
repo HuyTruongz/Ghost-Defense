@@ -21,5 +21,23 @@ namespace UDEV.GhostDefense
                 actor.Dash();
             }
         }
+
+        public void WeaponAttack()
+        {
+            if (!weapon) return;
+
+            IDamageCreater dmgCreater = weapon.GetComponent<IDamageCreater>();
+            if (dmgCreater != null)
+            {
+                dmgCreater.DealDamage();
+            }
+        }
+
+        public void Deactive()
+        {
+            if(!actor) return;
+
+            actor.gameObject.SetActive(false); 
+        }
     }
 }

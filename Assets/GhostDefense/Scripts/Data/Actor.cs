@@ -89,6 +89,7 @@ namespace UDEV.GhostDefense
 
         public virtual void TakeDamage(float dmg, Actor whoHit)
         {
+
             if (m_isInvincible || m_isKnockBack) return;
 
             if (m_curHp > 0)
@@ -96,11 +97,13 @@ namespace UDEV.GhostDefense
                 m_dmgTaked = dmg;
                 m_whoHit = whoHit;
                 m_curHp -= dmg;
+
                 if (m_curHp <= 0)
                 {
                     m_curHp = 0;
                     Dead();
                 }
+
                 KnockBack();
             }
         }
@@ -133,6 +136,7 @@ namespace UDEV.GhostDefense
             {
                 m_rb.velocity = new Vector2(stat.knockbackForce, yRate * stat.knockbackForce);
             }
+
         }
 
         protected IEnumerator StopKnockBack()
@@ -152,9 +156,8 @@ namespace UDEV.GhostDefense
         {
             yield return new WaitForSeconds(time);
 
-            m_isInvincible = false;
-
-            gameObject.layer = normalLayer;
+            m_isInvincible = false;         
+            gameObject.layer = normalLayer;     
         }
 
         protected virtual void Dead()
@@ -168,7 +171,7 @@ namespace UDEV.GhostDefense
 
             gameObject.layer = deadLayer;
 
-            PoolersManager.Ins.Spawn(PoolerTarget.NONE, deadVfxPool, transform.position, Quaternion.identity);
+            //PoolersManager.Ins.Spawn(PoolerTarget.NONE, deadVfxPool, transform.position, Quaternion.identity);
         }
 
         public virtual void Dash()

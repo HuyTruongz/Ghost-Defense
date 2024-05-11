@@ -210,12 +210,17 @@ public class AI : Actor
 
     public override void TakeDamage(float dmg, Actor whoHit)
     {
+ 
         if (IsDead) return;
 
         base.TakeDamage(dmg, whoHit);
         if(m_curHp > 0 || !m_isInvincible)
         {
             ChangState(AIState.GotHit);
+        }
+        if(m_curHp <= 0)
+        {
+            Dead();
         }
     }
 
@@ -293,6 +298,7 @@ public class AI : Actor
         m_rb.velocity = Vector3.zero;
         KnockBackMove(0.15f);
         Helper.PlayAnim(m_amin, AIState.GotHit.ToString());
+
     }
     private void GotHit_Exit() { }
     private void Ultimate_Enter()
@@ -311,7 +317,7 @@ public class AI : Actor
         m_curDmg = m_curStat.CurDmg;
     }
     private void Dead_Enter()
-    {
+    {       
         m_player.AddEnergy(m_curStat.EnergyBouns);
         m_player.AddXp(m_curStat.XpBouns);
     }

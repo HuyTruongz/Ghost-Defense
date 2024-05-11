@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3277100932036108189}
   - component: {fileID: 6098258684010621665}
   - component: {fileID: 5799751348655527134}
+  - component: {fileID: 7558450953395115794}
   m_Layer: 7
   m_Name: Graphic
   m_TagString: Untagged
@@ -106,6 +107,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7558450953395115794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802413228970525887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c61b86246f0e864faeb9fb8a0bab937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: {fileID: 2170697478857146732}
+  weapon: {fileID: 0}
 --- !u!1 &4059915599029721079
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +132,7 @@ GameObject:
   - component: {fileID: 5806248588766585415}
   - component: {fileID: -7050097722682166689}
   - component: {fileID: -6027533272160954843}
+  - component: {fileID: 2170697478857146732}
   m_Layer: 7
   m_Name: Ghost_01
   m_TagString: Enemy
@@ -202,3 +218,31 @@ CapsuleCollider2D:
   m_Offset: {x: -0.36099738, y: 0.0031907558}
   m_Size: {x: 1.1581787, y: 1.9891462}
   m_Direction: 0
+--- !u!114 &2170697478857146732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059915599029721079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c8d2f4dfc0a5841bfaaed300fea0da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 0
+  stat: {fileID: 11400000, guid: 8fc68593b737f034dab300423d07d885, type: 2}
+  normalLayer: 7
+  invincibleLayer: 8
+  deadLayer: 9
+  m_amin: {fileID: 5799751348655527134}
+  healthBarPool: 
+  hpBarOffset: {x: 0, y: 0, z: 0}
+  hpBarScale: {x: 1, y: 1, z: 1}
+  flashVfx: {fileID: 0}
+  deadVfxPool: 
+  IsBoss: 0
+  bossStat: {fileID: 11400000, guid: 0c40e17f1894f8740ba377233b902351, type: 2}
+  actionDist: 1.5
+  ultiDist: 4.5
+  dashDist: 1.5
