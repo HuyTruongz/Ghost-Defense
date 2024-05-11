@@ -73,6 +73,8 @@ public class AI : Actor
 
     private void ActionHandle()
     {
+        ReduceActionRate(ref m_isAtked,ref m_curAtkTime, m_curStat.atkTime);
+
         if (IsAtking || IsDashing || m_isKnockBack || IsDead || m_player.IsDead) return;
 
         GetTargetDir();
@@ -156,6 +158,22 @@ public class AI : Actor
         }
     }
 
+    public override void Dash()
+    {
+        if (IsFacingLeft)
+        {
+            transform.position = new Vector3(transform.position.x - dashDist,
+                transform.position.y,
+                transform.position.z);
+        }
+        else
+        {
+            transform.position = new Vector3(transform.position.x + dashDist,
+                transform.position.y,
+                transform.position.z);
+        }
+    }
+
     public void ChangState(AIState state)
     {
         m_prevState = m_fsm.State;
@@ -208,27 +226,58 @@ public class AI : Actor
     private void Walk_Enter() { }
     private void Walk_Update()
     {
+        if (m_isAtked)
+        {
+            m_rb.velocity = Vector2.zero;
+        }
+        else
+        {
+            m_rb.velocity = new Vector2(m_targetDir.x * m_curSpeed,m_rb.velocity.y);
+        }
         Helper.PlayAnim(m_amin,AIState.Walk.ToString());
     }
     private void Walk_Exit() { }
-    private void Dash1_Enter() { }
+    private void Dash1_Enter()
+    {
+        gameObject.layer = invincibleLayer;
+        ChangeStatDalay(AIState.Walk);
+    }
     private void Dash1_Update()
     {
         Helper.PlayAnim(m_amin, AIState.Dash1.ToString());
     }
-    private void Dash1_Exit() { }
-    private void Dash2_Enter() { }
+    private void Dash1_Exit()
+    {
+        gameObject.layer = normalLayer;
+        GetActionRate();
+    }
+    private void Dash2_Enter()
+    {
+        gameObject.layer = invincibleLayer;
+        ChangeStatDalay(AIState.Walk);
+    }
     private void Dash2_Update()
     {
         Helper.PlayAnim(m_amin, AIState.Dash2.ToString());
     }
-    private void Dash2_Exit() { }
-    private void Attack_Enter() { }
+    private void Dash2_Exit()
+    {
+        gameObject.layer = normalLayer;
+        GetActionRate();
+    }
+    private void Attack_Enter()
+    {
+        ChangeStatDalay(AIState.Walk);
+    }
     private void Attack_Update()
     {
+        m_rb.velocity = Vector3.zero;
         Helper.PlayAnim(m_amin, AIState.Attack.ToString());
     }
-    private void Attack_Exit() { }
+    private void Attack_Exit()
+    {
+        GetActionRate();
+    }
     private void GotHit_Enter() { }
     private void GotHit_Update()
     {
