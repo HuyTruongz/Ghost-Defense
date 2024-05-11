@@ -290,6 +290,8 @@ public class AI : Actor
     private void GotHit_Enter() { }
     private void GotHit_Update()
     {
+        m_rb.velocity = Vector3.zero;
+        KnockBackMove(0.15f);
         Helper.PlayAnim(m_amin, AIState.GotHit.ToString());
     }
     private void GotHit_Exit() { }
@@ -308,9 +310,14 @@ public class AI : Actor
         GetActionRate();
         m_curDmg = m_curStat.CurDmg;
     }
-    private void Dead_Enter() { }
+    private void Dead_Enter()
+    {
+        m_player.AddEnergy(m_curStat.EnergyBouns);
+        m_player.AddXp(m_curStat.XpBouns);
+    }
     private void Dead_Update()
     {
+        gameObject.layer = deadLayer;
         Helper.PlayAnim(m_amin, AIState.Dead.ToString());
     }
     private void Dead_Exit() { }
