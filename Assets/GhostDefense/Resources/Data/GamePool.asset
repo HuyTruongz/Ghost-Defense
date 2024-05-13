@@ -1,0 +1,314 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a53b63e0d6f314d9542878cff48ced, type: 3}
+  m_Name: GamePool
+  m_EditorClassIdentifier: 
+  id: 1715583512:612638:41898
+  target: 0
+  categories:
+  - name: Projectile Normal
+    id: 1715583530:738075:746480
+  - name: Ultimate
+    id: 1715583569:937810:313398
+  - name: Enemy
+    id: 1715583580:327040:6413
+  - name: UI
+    id: 1715583584:147009:982927
+  - name: Collectable
+    id: 1715583588:180964:101961
+  - name: Vfx
+    id: 1715583595:23395:476071
+  - name: Ulti Weapon
+    id: 1715583603:692641:896595
+  pools:
+  - poolName: BlueStar
+    id: 1715583630:217422:420919
+    prefab: {fileID: 5383017310800052966, guid: 35f0520870e65324caf2cb44e1de5008, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: Blade
+    id: 1715583646:887352:260322
+    prefab: {fileID: 6295483469580717776, guid: 347879981f6dc4946a01dca790f80484, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: BlueCircleBullet_1
+    id: 1715583805:348311:617166
+    prefab: {fileID: 7919071101835330324, guid: 0faf180e36ba0e6449a79af5c87dd052, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: BlueCircleBullet_2
+    id: 1715583838:619088:910964
+    prefab: {fileID: 3905268345054287071, guid: 38f2a09138cfc444695d167153101dc3, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: BlueLineBullet
+    id: 1715583851:75211:350245
+    prefab: {fileID: 9027916455625970618, guid: a6df98848ac8d3049b899ef27853a4c7, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: BlueStarBullet
+    id: 1715583869:974824:858087
+    prefab: {fileID: 5383017310800052966, guid: 35f0520870e65324caf2cb44e1de5008, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: BrownLineBullet
+    id: 1715583914:383833:589027
+    prefab: {fileID: 4363878293891489469, guid: a130005955b5119498b8013cc29c094d, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: GreenCircleBullet_1
+    id: 1715583953:527740:858587
+    prefab: {fileID: 7924868096374997367, guid: c7e2afcd57e20fc4d9ec312da8ccd6b2, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: GreenCircleBullet_2
+    id: 1715583968:897531:150573
+    prefab: {fileID: 8510387649694256898, guid: 543d9f6dfb2d2cd4e8b8b424e502bfc2, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: GreenStarBullet
+    id: 1715583977:16377:428057
+    prefab: {fileID: 6403318496786291481, guid: 86ae11ef101a4f2418379f704eeca7a0, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: RedCircleBullet_1
+    id: 1715583986:227035:21600
+    prefab: {fileID: 8405730476961134806, guid: 13d5e8edd78734c4391270e6e644ad1f, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: RedCircleBullet_2
+    id: 1715583994:660496:860770
+    prefab: {fileID: 7065634454295575856, guid: 62be082c88990044e875258ab7db36e4, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: RedLineBullet
+    id: 1715584002:19236:737133
+    prefab: {fileID: 4625248161710551413, guid: e3ea5d23d603e4441a6b641a7f6b4078, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: RedMissile
+    id: 1715584009:813083:44365
+    prefab: {fileID: 1461578481327538407, guid: 4a03799c8935ca54288094d5d9aab639, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: YellowLineBullet
+    id: 1715584017:922549:199776
+    prefab: {fileID: 3228091403347294959, guid: 835069a47004c3244ab08b100291777d, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: YellowRocket
+    id: 1715584026:176243:608823
+    prefab: {fileID: 4724136392098032005, guid: e8c268aef6533d540a80a4023c5fd7e0, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: YellowStarBullet
+    id: 1715584035:528771:138157
+    prefab: {fileID: 5214096332742665114, guid: d75f77a9d74331a4f9080b407be4fa1a, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583530:738075:746480
+  - poolName: EnemyBlueUlti
+    id: 1715598222:894176:926869
+    prefab: {fileID: 7820811198916022515, guid: 0519220821a31f3409834a75e954255a, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: EnemyGreenUlti
+    id: 1715598256:22698:86695
+    prefab: {fileID: 4375466179976825656, guid: 50a3e12688efc89459845f702cfdfd9f, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: EnemyRedUlti
+    id: 1715598269:735711:530814
+    prefab: {fileID: 3902991477060281201, guid: 633a8bad0b844db4e96e80ad4dbab1fa, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: Lighting
+    id: 1715598277:879592:205855
+    prefab: {fileID: 6351665631862812187, guid: 2e614c4dfb37f6a4b93411f3709e5ee8, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: MagicBlueUlti
+    id: 1715598285:279565:333906
+    prefab: {fileID: 2742313098528134230, guid: 4029729546c692444867eb89f18a6e28, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: MagicTrapBlue
+    id: 1715598294:632987:201505
+    prefab: {fileID: 7593951806717361996, guid: 986762c6189cedc4eb0bc19a22a588c5, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: MagicTrapYellow
+    id: 1715598303:678837:898909
+    prefab: {fileID: 6923098849705433637, guid: 731dc4ba4dfc26b4db55fb9495ef2765, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: MagicYellowUlti
+    id: 1715598312:326674:319595
+    prefab: {fileID: 3647329631521894566, guid: cad295ea19f7cf94ea6a1722f88a6e74, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: PlayerBlueUlti
+    id: 1715598320:40389:547877
+    prefab: {fileID: 6141684727633716316, guid: abd8479fb7918f94582ff8163e133e3e, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: PlayerGreenUlti
+    id: 1715598328:603071:701898
+    prefab: {fileID: 325614140931143861, guid: 5e5c260a33223264cb30bba9a31a52c0, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: PlayerRedUlti
+    id: 1715598337:185958:10534
+    prefab: {fileID: 7786458512960012903, guid: 55dcfa78d08d5ef4487c46a68f970cae, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: RedBlockBullet
+    id: 1715598345:267751:101206
+    prefab: {fileID: 4966018734447015886, guid: cb4d340028facee41a973b586794d93c, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583569:937810:313398
+  - poolName: Ghost_01
+    id: 1715598400:923999:24134
+    prefab: {fileID: 4059915599029721079, guid: 558cb32c22d33cb4094bd185197e63af, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_02
+    id: 1715598417:903441:408351
+    prefab: {fileID: 5901307518310812801, guid: d7ec3ac884e539f4d8b38261b4042e7d, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_03
+    id: 1715598425:156644:840279
+    prefab: {fileID: 928320868086861430, guid: 468bf7195c6ceab4490c55a62470cc31, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_04
+    id: 1715598432:200700:221037
+    prefab: {fileID: 6218780983002447855, guid: d4040fdb9d3d4cb4e9b2cc39b01f7d09, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_05
+    id: 1715598440:360481:512018
+    prefab: {fileID: 1125729723415011722, guid: 3ceb0b1ebe2e7e64baf242214501e7f3, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_06
+    id: 1715598449:502796:882316
+    prefab: {fileID: 5320319963559940040, guid: e495f984f8a5fc8489e406737bebe404, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_07
+    id: 1715598455:256983:833341
+    prefab: {fileID: 2257105206964800598, guid: 50b00953eb6ee534bbd913c338ec62a3, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_08
+    id: 1715598461:878348:222710
+    prefab: {fileID: 6241918490869408607, guid: e32e5b362eaa9904585e5ee03a684048, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_09
+    id: 1715598467:805329:161616
+    prefab: {fileID: 1774031113827933228, guid: cbc45e8ccdbcabe45b9356ec3a89e913, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_10
+    id: 1715598475:989348:629776
+    prefab: {fileID: 3741691939328638912, guid: 9f279cb11060a4940a8112f262789756, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Ghost_11
+    id: 1715598481:976519:220317
+    prefab: {fileID: 342055133169380156, guid: 5583e20ec5d3c2c43b7a3fe87ed52fcd, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583580:327040:6413
+  - poolName: Coin
+    id: 1715598506:528093:829841
+    prefab: {fileID: 1783160255678758965, guid: 3b8e72dad5bc7e64abb410da785c52a8, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583588:180964:101961
+  - poolName: Dimond
+    id: 1715598515:979864:669012
+    prefab: {fileID: 8406361703139591679, guid: aaa23ff5c4961504ba978226d2e89e1d, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583588:180964:101961
+  - poolName: Hp
+    id: 1715598522:670721:50811
+    prefab: {fileID: 4381737514416828182, guid: 3045e82d7ff9d814a9443b76ff411777, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583588:180964:101961
+  - poolName: BigBlade
+    id: 1715598543:37343:278543
+    prefab: {fileID: 9017826276878377688, guid: e8bb1e89104f86b4a9f4d19f90a1a6b2, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583603:692641:896595
+  - poolName: Spear
+    id: 1715598567:319552:413022
+    prefab: {fileID: 6536998317328339506, guid: d86b29ba21f71f240bd71eded714d3a4, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583603:692641:896595
+  - poolName: ExplosionVfx
+    id: 1715598592:733586:538649
+    prefab: {fileID: 8278249679154337741, guid: e12963a041a5e1247beeec355f2cfd95, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583595:23395:476071
+  - poolName: SoulExplosion
+    id: 1715598605:605366:951266
+    prefab: {fileID: 1074689663800542, guid: 1850d2201f2d55543a723f7f0645b605, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583595:23395:476071
