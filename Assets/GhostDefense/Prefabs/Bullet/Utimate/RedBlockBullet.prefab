@@ -115,6 +115,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6487835663929924208}
+  - component: {fileID: 5013164300076694559}
+  - component: {fileID: 958013072706954648}
   m_Layer: 0
   m_Name: RedBlockBullet
   m_TagString: Untagged
@@ -138,3 +140,36 @@ Transform:
   - {fileID: 7594199350744950676}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5013164300076694559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4966018734447015886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31780aba8b4acea44bf985816a1605e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 0
+  speed: 0
+  damage: 0
+  deactiveWhenHitted: 0
+  bodyHitPool: None
+  owenr: {fileID: 0}
+--- !u!114 &958013072706954648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4966018734447015886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bda87673985cf09418a8e61549dbb6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableOnly: 1
+  delay: 10
+  isOverride: 0

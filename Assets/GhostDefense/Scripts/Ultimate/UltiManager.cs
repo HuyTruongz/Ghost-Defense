@@ -16,7 +16,7 @@ namespace UDEV.GhostDefense
         public void UltiTrigger()
         {
             float rateCheking = Random.Range(0f,1f);
-            var finder = ultiCtrs.Where(u => u.rate > rateCheking);
+            var finder = ultiCtrs.Where(u => u.rate >= rateCheking);
 
             if (finder == null) return;
 

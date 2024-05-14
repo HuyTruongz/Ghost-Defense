@@ -91,6 +91,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 768207197061149508}
+  - {fileID: 328640086441961416}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &90915597199575317
@@ -253,14 +254,45 @@ MonoBehaviour:
   invincibleLayer: 8
   deadLayer: 9
   m_amin: {fileID: 4876500097095350862}
-  healthBarPool: 
+  healthBarPool: None
   hpBarOffset: {x: 0, y: 0, z: 0}
   hpBarScale: {x: 1, y: 1, z: 1}
   flashVfx: {fileID: 0}
-  deadVfxPool: 
+  deadVfxPool: None
   headCol: {fileID: 5614801301333661235}
   bodyCol: {fileID: 8088339561797902878}
   deadCol: {fileID: 7339444125693482459}
+--- !u!1 &4718079035478426615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3582098947426831361}
+  m_Layer: 6
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3582098947426831361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4718079035478426615}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.73, y: -0.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 768207197061149508}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8080299335570305866
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +326,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5964423951822023221}
+  - {fileID: 3582098947426831361}
   m_Father: {fileID: 2473592348283983108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4689438505145119858
@@ -381,5 +414,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c61b86246f0e864faeb9fb8a0bab937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: {fileID: 3542118346805177980}
+  owner: {fileID: 3542118346805177980}
   weapon: {fileID: 1068953079998710641}
+  ultiMng: {fileID: 3092771827170376486}
+--- !u!1 &8850843884136986631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 328640086441961416}
+  - component: {fileID: 3092771827170376486}
+  - component: {fileID: 7923272267939499792}
+  m_Layer: 6
+  m_Name: UltiManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &328640086441961416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850843884136986631}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2473592348283983108}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3092771827170376486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850843884136986631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36a61afd2071644792a338b262f864f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ultiCtrs:
+  - {fileID: 7923272267939499792}
+--- !u!114 &7923272267939499792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850843884136986631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979a8d7d3d48c5d40ac9afa0c055fabc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 1
+  projectilePool: 1715598337:185958:10534
+  speed: 10
+  firePoint: {fileID: 3582098947426831361}

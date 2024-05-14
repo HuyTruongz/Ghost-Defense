@@ -218,7 +218,7 @@ public class AI : Actor
         {
             ChangState(AIState.GotHit);
         }
-        if(m_curHp <= 0)
+        if (m_curHp <= 0)
         {
             Dead();
         }
@@ -297,6 +297,10 @@ public class AI : Actor
     {
         m_rb.velocity = Vector3.zero;
         KnockBackMove(0.15f);
+        if (!m_isKnockBack)
+        {
+            ChangState(AIState.Walk);
+        }
         Helper.PlayAnim(m_amin, AIState.GotHit.ToString());
 
     }
