@@ -312,3 +312,9 @@ MonoBehaviour:
     startingParent: {fileID: 0}
     startingQuantity: 0
     category: 1715583595:23395:476071
+  - poolName: Health Bar
+    id: 1715676153:292153:711907
+    prefab: {fileID: 6931198521767024017, guid: 972b7facc037a354588332004f89ccb8, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1715583584:147009:982927

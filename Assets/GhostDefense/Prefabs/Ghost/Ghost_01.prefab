@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8646251401259225184}
   m_Father: {fileID: 5806248588766585415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6098258684010621665
@@ -155,7 +156,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3277100932036108189}
-  - {fileID: 8646251401259225184}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &-7050097722682166689
@@ -238,8 +238,8 @@ MonoBehaviour:
   invincibleLayer: 8
   deadLayer: 9
   m_amin: {fileID: 5799751348655527134}
-  healthBarPool: None
-  hpBarOffset: {x: 0, y: 0, z: 0}
+  healthBarPool: 1715676153:292153:711907
+  hpBarOffset: {x: -0.47, y: 1.33, z: 0}
   hpBarScale: {x: 1, y: 1, z: 1}
   flashVfx: {fileID: 0}
   deadVfxPool: None
@@ -257,6 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8646251401259225184}
+  - component: {fileID: 3691382047167034086}
   m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
@@ -272,10 +273,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6213172267383946010}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5806248588766585415}
+  m_Father: {fileID: 3277100932036108189}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3691382047167034086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213172267383946010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2dadc2b9159c643afddbfd36556abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 1
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  atkRadius: 0.6
+  offset: {x: 0, y: 0, z: 0}
+  m_owner: {fileID: 2170697478857146732}
+  damage: 0
+  useCameraShake: 0
+  shakeDur: 0
+  shakeFreg: 0
+  shakeAmpli: 0

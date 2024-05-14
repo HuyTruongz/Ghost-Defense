@@ -69,6 +69,11 @@ public class AI : Actor
     private void Update()
     {
         ActionHandle();
+
+        if (m_healthBar)
+        {
+            m_healthBar.UpdateValue(m_curHp,m_curStat.CurHp);
+        }
     }
 
     private void ActionHandle()
@@ -133,7 +138,8 @@ public class AI : Actor
         m_fsm.ChangeState(AIState.Walk);
         m_prevState = m_fsm.State;
 
-        //CreateHealthBarUI();
+        //CreateHealthBarUI(); //chua hien health bar;
+        
     }
 
     private void GetActionRate()

@@ -171,7 +171,7 @@ namespace UDEV.GhostDefense
 
             gameObject.layer = deadLayer;
 
-            //PoolersManager.Ins.Spawn(PoolerTarget.NONE, deadVfxPool, transform.position, Quaternion.identity);
+            PoolersManager.Ins.Spawn(PoolerTarget.NONE, deadVfxPool, transform.position, Quaternion.identity);
         }
 
         public virtual void Dash()
@@ -239,18 +239,18 @@ namespace UDEV.GhostDefense
 
         protected void CreateHealthBarUI()
         {
-            GameObject hpBar = PoolersManager.Ins.Spawn(PoolerTarget.NONE, healthBarPool, transform.position, Quaternion.identity);
+            GameObject hpBar = PoolersManager.Ins.Spawn(PoolerTarget.NONE, healthBarPool, transform.position
+                ,Quaternion.identity);
             if (!hpBar) return;
-            {
+         
                 hpBar.transform.localScale = hpBarScale;
                 m_healthBar = hpBar.GetComponent<ImageFilled>();
 
-                if(!m_healthBar) return;
+                if (!m_healthBar) return;
 
                 m_healthBar.Show(true);
-                m_healthBar.UpdateValue(m_curHp,stat.hp);
-                m_healthBar.Root = transform;
-            }
+                m_healthBar.UpdateValue(m_curHp, stat.hp);
+                m_healthBar.Root = transform;       
         }
 
         protected void FlipHpBarOffset()
