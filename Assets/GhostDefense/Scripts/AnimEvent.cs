@@ -55,5 +55,10 @@ namespace UDEV.GhostDefense
 
             owner.gameObject.SetActive(false); 
         }
+
+        public void PlayFootstepSound()
+        {
+
+        }
     }
 }

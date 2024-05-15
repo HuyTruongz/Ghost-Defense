@@ -131,10 +131,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2170697478857146732, guid: 558cb32c22d33cb4094bd185197e63af, type: 3}
-      propertyPath: healthBarPool
-      value: 1715676153:292153:711907
-      objectReference: {fileID: 0}
     - target: {fileID: 4059915599029721079, guid: 558cb32c22d33cb4094bd185197e63af, type: 3}
       propertyPath: m_Name
       value: Ghost_01
@@ -178,6 +174,10 @@ PrefabInstance:
     - target: {fileID: 5806248588766585415, guid: 558cb32c22d33cb4094bd185197e63af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970476153902998397, guid: 558cb32c22d33cb4094bd185197e63af, type: 3}
+      propertyPath: rate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
