@@ -138,7 +138,7 @@ public class AI : Actor
         m_fsm.ChangeState(AIState.Walk);
         m_prevState = m_fsm.State;
 
-        //CreateHealthBarUI(); //chua hien health bar;
+        CreateHealthBarUI();
         
     }
 

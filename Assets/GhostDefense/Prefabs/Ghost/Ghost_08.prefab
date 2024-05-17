@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 332163306611307832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.167, y: -0.524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 2010889101229874448}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.96, y: -0.35, z: 0}
+  m_LocalPosition: {x: 1.01, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,7 +81,7 @@ MonoBehaviour:
     m_Bits: 64
   atkRadius: 0.6
   offset: {x: 0, y: 0, z: 0}
-  m_owner: {fileID: 0}
+  m_owner: {fileID: -539013944448311401}
   damage: 0
   useCameraShake: 0
   shakeDur: 0
@@ -221,9 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c61b86246f0e864faeb9fb8a0bab937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
-  weapon: {fileID: 0}
-  ultiMng: {fileID: 0}
+  owner: {fileID: -539013944448311401}
+  weapon: {fileID: 2010889101229874448}
+  ultiMng: {fileID: 607024364805547027}
 --- !u!1 &6241918490869408607
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,8 +257,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9203941100582692288}
   - {fileID: 3236499360237017255}
+  - {fileID: 9203941100582692288}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &674733967587337581
@@ -336,21 +336,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageTo: 0
-  stat: {fileID: 0}
+  stat: {fileID: 11400000, guid: d175c353413baf04c944f378769ec30b, type: 2}
   normalLayer: 7
   invincibleLayer: 8
   deadLayer: 9
-  m_amin: {fileID: 0}
+  m_amin: {fileID: 1926843449427469909}
   healthBarPool: 1715676153:292153:711907
-  hpBarOffset: {x: 0, y: 0, z: 0}
+  hpBarOffset: {x: -0.54, y: 1, z: 0}
   hpBarScale: {x: 1, y: 1, z: 1}
-  flashVfx: {fileID: 0}
+  flashVfx: {fileID: 5482535990217009096}
   deadVfxPool: 1715598605:605366:951266
   IsBoss: 0
   bossStat: {fileID: 11400000, guid: 0c40e17f1894f8740ba377233b902351, type: 2}
-  actionDist: 0
-  ultiDist: 0
-  dashDist: 0
+  actionDist: 2
+  ultiDist: 4
+  dashDist: 3
 --- !u!114 &5482535990217009096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16d3a4d22b5e9446a2f3524d172c6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderers: []
+  spriteRenderers:
+  - {fileID: 5981569679087669644}
   flashRate: 0.1
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 0.9811321, g: 0.43965825, b: 0.43965825, a: 0.64705884}
@@ -415,7 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36a61afd2071644792a338b262f864f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ultiCtrs: []
+  ultiCtrs:
+  - {fileID: 4220530742800139182}
 --- !u!114 &4220530742800139182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a8d7d3d48c5d40ac9afa0c055fabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 0
-  projectilePool: None
+  rate: 1
+  projectilePool: 1715598269:735711:530814
   speed: 0
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 5869532543409735667}

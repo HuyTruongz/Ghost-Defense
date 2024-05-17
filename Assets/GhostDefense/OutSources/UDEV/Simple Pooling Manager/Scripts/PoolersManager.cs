@@ -27,10 +27,13 @@ namespace UDEV.SPM
                 pooledObjects = _pooledObjects;
             }
         }
-        private void Start()
+
+        public override void Awake()
         {
+            base.Awake();
             Init();
         }
+
 
         public void Init()
         {

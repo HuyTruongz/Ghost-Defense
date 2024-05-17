@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2060607988377940009}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.29, y: -0.523, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -165,9 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c61b86246f0e864faeb9fb8a0bab937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
-  weapon: {fileID: 0}
-  ultiMng: {fileID: 0}
+  owner: {fileID: -7640731961760249038}
+  weapon: {fileID: 6489727137898864077}
+  ultiMng: {fileID: 6953159277968583604}
 --- !u!1 &5901307518310812801
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,21 +280,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageTo: 0
-  stat: {fileID: 0}
+  stat: {fileID: 11400000, guid: f688ef8074cc4444886f89f930fa94ae, type: 2}
   normalLayer: 7
   invincibleLayer: 8
   deadLayer: 9
-  m_amin: {fileID: 0}
+  m_amin: {fileID: 9185864917714923313}
   healthBarPool: 1715676153:292153:711907
-  hpBarOffset: {x: 0, y: 0, z: 0}
+  hpBarOffset: {x: -0.25, y: 1.55, z: 0}
   hpBarScale: {x: 1, y: 1, z: 1}
   flashVfx: {fileID: 0}
   deadVfxPool: 1715598605:605366:951266
   IsBoss: 0
   bossStat: {fileID: 11400000, guid: 0c40e17f1894f8740ba377233b902351, type: 2}
-  actionDist: 0
-  ultiDist: 0
-  dashDist: 0
+  actionDist: 4
+  ultiDist: 4.5
+  dashDist: 3
 --- !u!114 &-2632345150914776424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16d3a4d22b5e9446a2f3524d172c6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderers: []
+  spriteRenderers:
+  - {fileID: 2804879093240666193}
   flashRate: 0.1
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 0.9811321, g: 0.43965825, b: 0.43965825, a: 0.64705884}
@@ -323,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5951720992874069164}
-  - component: {fileID: 5014451032740550447}
+  - component: {fileID: 1462754889278126016}
   m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
@@ -346,7 +347,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7751361202560545030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5014451032740550447
+--- !u!114 &1462754889278126016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,21 +356,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6489727137898864077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a2dadc2b9159c643afddbfd36556abc, type: 3}
+  m_Script: {fileID: 11500000, guid: 979a8d7d3d48c5d40ac9afa0c055fabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTo: 0
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  atkRadius: 0.6
-  offset: {x: 0, y: 0, z: 0}
-  m_owner: {fileID: 0}
-  damage: 0
-  useCameraShake: 0
-  shakeDur: 0
-  shakeFreg: 0
-  shakeAmpli: 0
+  rate: 1
+  projectilePool: 1715583851:75211:350245
+  speed: 0
+  firePoint: {fileID: 2058715864304865438}
 --- !u!1 &6977910538870382405
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36a61afd2071644792a338b262f864f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ultiCtrs: []
+  ultiCtrs:
+  - {fileID: 7861567111464297206}
 --- !u!114 &7861567111464297206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a8d7d3d48c5d40ac9afa0c055fabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 0
-  projectilePool: None
+  rate: 1
+  projectilePool: 1715583851:75211:350245
   speed: 0
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 2058715864304865438}

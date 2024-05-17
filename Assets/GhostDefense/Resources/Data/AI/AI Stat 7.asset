@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AI Stat 7
   m_EditorClassIdentifier: 
   id: 1715070867297297961915
-  thumb: {fileID: 7336298474659753992, guid: 9786ebd6290c76a41919693aa4a55cdd, type: 3}
+  thumb: {fileID: 0}
   hp: 8
   damage: 2
   moveSpeed: 3

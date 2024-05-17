@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageTo: 0
-  speed: 0
+  speed: 6.5
   damage: 0
   deactiveWhenHitted: 1
-  bodyHitPool: None
+  bodyHitPool: 1715598592:733586:538649
   owenr: {fileID: 0}
 --- !u!114 &3725162907838493228
 MonoBehaviour:
