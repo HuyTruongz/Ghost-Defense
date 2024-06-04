@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 8088339561797902878}
   - component: {fileID: 7339444125693482459}
   - component: {fileID: 3542118346805177980}
+  - component: {fileID: 5250035138775018296}
   m_Layer: 6
   m_Name: Sparta
   m_TagString: Player
@@ -257,11 +258,31 @@ MonoBehaviour:
   healthBarPool: None
   hpBarOffset: {x: 0, y: 0, z: 0}
   hpBarScale: {x: 1, y: 1, z: 1}
-  flashVfx: {fileID: 0}
-  deadVfxPool: None
+  flashVfx: {fileID: 5250035138775018296}
+  deadVfxPool: 1715676153:292153:711907
   headCol: {fileID: 5614801301333661235}
   bodyCol: {fileID: 8088339561797902878}
   deadCol: {fileID: 7339444125693482459}
+--- !u!114 &5250035138775018296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3249744400175336442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16d3a4d22b5e9446a2f3524d172c6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 4689438505145119858}
+  flashRate: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 1, g: 1, b: 1, a: 0.3137255}
+  OnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4718079035478426615
 GameObject:
   m_ObjectHideFlags: 0

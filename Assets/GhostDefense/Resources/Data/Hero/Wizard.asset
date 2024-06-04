@@ -20,7 +20,7 @@ MonoBehaviour:
   knockbackForce: 5
   knockbackTime: 0.2
   invincibleTime: 0.5
-  runSp: 5
+  runSeed: 5
   atkRate: 0.1
   dashRate: 0.1
   dashDist: 3
@@ -30,7 +30,7 @@ MonoBehaviour:
   maxLevel: 50
   level: 1
   playerLevel: 1
-  xp: 0
+  xp: 10.778711
   lvUpXpRequired: 60
   point: 0
   xpUpRate: 35
