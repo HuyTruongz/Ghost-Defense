@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 328640086441961416}
   - component: {fileID: 3092771827170376486}
   - component: {fileID: 7923272267939499792}
+  - component: {fileID: 3562904143914161733}
   m_Layer: 6
   m_Name: UltiManager
   m_TagString: Untagged
@@ -485,6 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ultiCtrs:
   - {fileID: 7923272267939499792}
+  - {fileID: 3562904143914161733}
 --- !u!114 &7923272267939499792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +499,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a8d7d3d48c5d40ac9afa0c055fabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 1
+  rate: 0
   projectilePool: 1715598337:185958:10534
   speed: 10
   firePoint: {fileID: 3582098947426831361}
+--- !u!114 &3562904143914161733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850843884136986631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f487098744c94204ba4da34f28442edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 1
+  weapon: 1715598567:319552:413022
+  targetNum: 5
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  atkRadius: 10
+  weaponSpeed: 20

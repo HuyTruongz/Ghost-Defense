@@ -13,12 +13,12 @@ namespace UDEV.GhostDefense
         public int targetNum;
         public LayerMask targetLayer;
         public float atkRadius;
-        public float waeponSpeed;
+        public float weaponSpeed;
         protected List<AI> m_targets = new List<AI>();
 
         public override void DealDamage()
         {
-            FindTargets();
+            FindTargets();      
         }
 
         protected void FindTargets()
@@ -43,6 +43,12 @@ namespace UDEV.GhostDefense
             int curentTargetNum = 0;
             curentTargetNum = m_targets.Count > targetNum ? targetNum : m_targets.Count;
             return curentTargetNum;
+        }
+
+        protected virtual void OnDrawGizmos()
+        {
+            Gizmos.color = Helper.ChangAlpha(Color.green,0.2f);
+            Gizmos.DrawSphere(transform.position, atkRadius);
         }
     }
 }
