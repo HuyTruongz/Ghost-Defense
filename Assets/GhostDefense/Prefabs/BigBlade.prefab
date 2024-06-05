@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6291707370261062507}
   - component: {fileID: 9011860060484238726}
   - component: {fileID: 3563474081154554675}
+  - component: {fileID: 2264654329643624276}
   m_Layer: 0
   m_Name: Graphic
   m_TagString: Untagged
@@ -106,6 +107,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2264654329643624276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3412659283015141016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2dadc2b9159c643afddbfd36556abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 0
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  atkRadius: 3
+  offset: {x: 0, y: 0, z: 0}
+  m_owner: {fileID: 0}
+  damage: 0
+  useCameraShake: 1
+  shakeDur: 0.45
+  shakeFreg: 0.45
+  shakeAmpli: 1
 --- !u!1 &9017826276878377688
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5053002648293409060}
+  - component: {fileID: 584623143220734842}
   m_Layer: 0
   m_Name: BigBlade
   m_TagString: Untagged
@@ -138,3 +164,18 @@ Transform:
   - {fileID: 6291707370261062507}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584623143220734842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9017826276878377688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bda87673985cf09418a8e61549dbb6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableOnly: 1
+  delay: 1.5
+  isOverride: 0

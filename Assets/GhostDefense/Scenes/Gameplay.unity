@@ -633,6 +633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vking
       objectReference: {fileID: 0}
+    - target: {fileID: 8195806664511626677, guid: df717fc7140ff5d4f84aa0ca2018d02f, type: 3}
+      propertyPath: rate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8488206288836148086, guid: df717fc7140ff5d4f84aa0ca2018d02f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
