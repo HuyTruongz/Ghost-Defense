@@ -268,6 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8055668282532605524}
   - component: {fileID: 5752272694039802713}
+  - component: {fileID: 9108627127775025108}
   m_Layer: 6
   m_Name: UltiManager
   m_TagString: Untagged
@@ -302,7 +303,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36a61afd2071644792a338b262f864f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ultiCtrs: []
+  ultiCtrs:
+  - {fileID: 9108627127775025108}
+--- !u!114 &9108627127775025108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712827771022804190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc30645f6ab4494aa4a943dd513d99e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 1
+  weapon: 1715598277:879592:205855
+  targetNum: 5
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  atkRadius: 10
+  weaponSpeed: 10
 --- !u!1 &8772805331746351235
 GameObject:
   m_ObjectHideFlags: 0
