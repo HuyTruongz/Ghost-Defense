@@ -261,6 +261,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1125424355165059191}
+  - component: {fileID: 478025689410155410}
+  - component: {fileID: 3808597829239835237}
   m_Layer: 0
   m_Name: Clouds
   m_TagString: Untagged
@@ -286,6 +288,46 @@ Transform:
   - {fileID: 364503613019274353}
   m_Father: {fileID: 5546115275137906589}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &478025689410155410
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867829204940284902}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &3808597829239835237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867829204940284902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f8ce5f9591f15418c74df227325363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &4502053845978323859
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5546115275137906589}
+  - component: {fileID: 668668958319841440}
   m_Layer: 0
   m_Name: Map_05
   m_TagString: Untagged
@@ -408,6 +451,122 @@ Transform:
   - {fileID: 1125424355165059191}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668668958319841440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4703684056500245273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c293c5f31bc1b4a9042f6d97b28179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxCamera: {fileID: 0}
+  Speed: 2
+  Elements:
+  - GameObjects:
+    - {fileID: 4502053845978323859}
+    SpeedRatio: 0.1
+    RepositionLogic:
+      PositionMode: 1
+      ScaleHeight: 1.1
+      SortingOrder: 0
+      MinYPercent: 0
+      MaxYPercent: 0
+      MinXPercent: 0
+      MaxXPercent: 0
+  - GameObjects:
+    - {fileID: 2127908773496130691}
+    SpeedRatio: 0.2
+    RepositionLogic:
+      PositionMode: 1
+      ScaleHeight: 0.9
+      SortingOrder: 4
+      MinYPercent: 0
+      MaxYPercent: 0
+      MinXPercent: 0
+      MaxXPercent: 0
+  - GameObjects:
+    - {fileID: 6658223860715291262}
+    SpeedRatio: 0.4
+    RepositionLogic:
+      PositionMode: 1
+      ScaleHeight: 1
+      SortingOrder: 0
+      MinYPercent: 0
+      MaxYPercent: 0
+      MinXPercent: 0
+      MaxXPercent: 0
+  - GameObjects:
+    - {fileID: 8149023683509204060}
+    SpeedRatio: 0.2
+    RepositionLogic:
+      PositionMode: 2
+      ScaleHeight: 0.15
+      SortingOrder: 1
+      MinYPercent: 0
+      MaxYPercent: 0
+      MinXPercent: 0
+      MaxXPercent: 0
+  - GameObjects:
+    - {fileID: 7706547991723708323}
+    SpeedRatio: 0.4
+    RepositionLogic:
+      PositionMode: 1
+      ScaleHeight: 0.3
+      SortingOrder: -2
+      MinYPercent: 0
+      MaxYPercent: 0
+      MinXPercent: 0
+      MaxXPercent: 0
+  - GameObjects:
+    - {fileID: 6215891283944864511}
+    SpeedRatio: 0.4
+    RepositionLogic:
+      PositionMode: 1
+      ScaleHeight: 0.45
+      SortingOrder: 2
+      MinYPercent: 0
+      MaxYPercent: 0
+      MinXPercent: 0
+      MaxXPercent: 0
+  - GameObjects:
+    - {fileID: 2345330505602877839}
+    SpeedRatio: 0.4
+    RepositionLogic:
+      PositionMode: 2
+      ScaleHeight: 0
+      SortingOrder: 4
+      MinYPercent: 0.4
+      MaxYPercent: 0.7
+      MinXPercent: 0.5
+      MaxXPercent: 1.4
+  - GameObjects:
+    - {fileID: 3598312601428875834}
+    SpeedRatio: 0.4
+    RepositionLogic:
+      PositionMode: 2
+      ScaleHeight: 0
+      SortingOrder: 5
+      MinYPercent: 0.4
+      MaxYPercent: 0.7
+      MinXPercent: 0.5
+      MaxXPercent: 1.4
+  - GameObjects:
+    - {fileID: 5019598078846343991}
+    SpeedRatio: 0.4
+    RepositionLogic:
+      PositionMode: 2
+      ScaleHeight: 0
+      SortingOrder: 6
+      MinYPercent: 0.4
+      MaxYPercent: 0.7
+      MinXPercent: 0.5
+      MaxXPercent: 1.4
+  IsHorizontal: 1
+  WrapOverlap: 0.03
 --- !u!1 &5019598078846343991
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3583457815483119604}
   - component: {fileID: 6679952237742306569}
+  - component: {fileID: 5994226122382835989}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -744,6 +904,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &5994226122382835989
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706547991723708323}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4049818}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 1.26}
+    newSize: {x: 10.24, y: 1.04}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 90, y: 0.4500364}
+  m_EdgeRadius: 0
 --- !u!1 &8149023683509204060
 GameObject:
   m_ObjectHideFlags: 0
