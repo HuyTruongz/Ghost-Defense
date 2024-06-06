@@ -256,12 +256,12 @@ public class WavePlayer : Singleton<WavePlayer>
         var aiClone = PoolersManager.Ins.Spawn(PoolerTarget.NONE, (element.randomEnemy) ? element.enemySet.GetEnemy() : element.enemy, startPoint, new Quaternion(0, 0, 0, 0));
         if (aiClone)
         {
-            ////AI ai = aiClone.GetComponent<AI>();
-            //if (ai)
-            //{
-            //    ai.isBoss = isBoss;
-            //    ai.Init();
-            //}    
+            AI ai = aiClone.GetComponent<AI>();
+            if (ai)
+            {
+                //ai.isBoss = isBoss;
+                ai.Init();
+            }
         }
         alive.Add(
             aiClone

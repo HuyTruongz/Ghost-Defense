@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f6958c58f7ec044a71ec508c0b0838, type: 3}
+  m_Name: Weighted Enemy
+  m_EditorClassIdentifier: 
+  enemies:
+  - spawn: 1715598467:805329:161616
+    weight: 2
+  - spawn: 1715598475:989348:629776
+    weight: 1
+  - spawn: 1715598481:976519:220317
+    weight: 3
+  total: 6
+  icon: {fileID: 2800000, guid: d53f7eedc0ed8b8479d93e7709e7175e, type: 3}
