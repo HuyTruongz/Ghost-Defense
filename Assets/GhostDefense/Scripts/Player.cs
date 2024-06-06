@@ -237,6 +237,16 @@ namespace UDEV.GhostDefense
             m_curEnergy += energyBouns;
         }
 
+        private void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.CompareTag(GameTag.Collectable.ToString()))
+            {
+                Collectable collectable = col.gameObject.GetComponent<Collectable>();
+                if(!collectable) return;
+                collectable.Trigger();
+            }
+        }
+
         #region
         private void Idle_Enter()
         {

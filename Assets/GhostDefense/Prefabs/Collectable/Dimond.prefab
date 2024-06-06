@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: -6033923744049361074}
   m_Layer: 10
   m_Name: Dimond
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

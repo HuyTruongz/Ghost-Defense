@@ -5,7 +5,8 @@ using UnityEngine;
 public enum GameTag
 {
     Player,
-    Enemy
+    Enemy,
+    Collectable
 }
 
 public enum GameScene
