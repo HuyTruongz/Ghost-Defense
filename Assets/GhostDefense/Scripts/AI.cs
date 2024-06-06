@@ -330,10 +330,17 @@ public class AI : Actor
     {       
         m_player.AddEnergy(m_curStat.EnergyBouns);
         m_player.AddXp(m_curStat.XpBouns);
+
+        float luckCheking = UnityEngine.Random.Range(0f, 1f);
+        if (luckCheking <= m_player.CurStat.luck)
+        {
+            CollectableManager.Ins.Spawn(transform.position);
+        }
     }
     private void Dead_Update()
     {
         gameObject.layer = deadLayer;
+        
         Helper.PlayAnim(m_amin, AIState.Dead.ToString());
     }
     private void Dead_Exit() { }

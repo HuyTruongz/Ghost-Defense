@@ -95,6 +95,8 @@ GameObject:
   - component: {fileID: 6457275478741117784}
   - component: {fileID: -6891925020640322512}
   - component: {fileID: -6033923744049361074}
+  - component: {fileID: 7672186308835264868}
+  - component: {fileID: 2664740177441719973}
   m_Layer: 10
   m_Name: Dimond
   m_TagString: Collectable
@@ -144,7 +146,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &-6033923744049361074
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -180,3 +182,41 @@ CircleCollider2D:
   m_Offset: {x: -0.017754912, y: 0.011836648}
   serializedVersion: 2
   m_Radius: 0.35040843
+--- !u!114 &7672186308835264868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406361703139591679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3309151775671a4ba5b3a35c03fb3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minBonus: 0
+  maxBonus: 0
+  lifeTime: 5
+  spawnPos: 8
+  hitSound: {fileID: 0}
+  deactiveWhenHitted: 0
+--- !u!114 &2664740177441719973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406361703139591679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16d3a4d22b5e9446a2f3524d172c6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 3420428040254769306}
+  flashRate: 0
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 1, g: 1, b: 1, a: 0.3137255}
+  OnCompleted:
+    m_PersistentCalls:
+      m_Calls: []

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UDEV.SPM;
 
 public enum GameTag
 {
@@ -62,4 +63,13 @@ public enum PlayerCollider
 {
     Normal,
     Dead
+}
+
+[System.Serializable]
+public class CollectableItem
+{
+    [Range(0f, 1f)] public float spawnRate;
+    public int amount;
+    [PoolerKeys(target = PoolerTarget.NONE)]
+    public string collectablePool;
 }

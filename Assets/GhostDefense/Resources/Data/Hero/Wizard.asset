@@ -26,7 +26,7 @@ MonoBehaviour:
   dashDist: 3
   ultiEnegry: 30
   defense: 0.2
-  luck: 0.4
+  luck: 1
   maxLevel: 50
   level: 1
   playerLevel: 1
