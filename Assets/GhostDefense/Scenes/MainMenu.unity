@@ -123,6 +123,101 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &108025597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108025598}
+  - component: {fileID: 108025599}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &108025598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108025597}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &108025599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108025597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3002f1d33e248408a6238c35f51e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - minBonus: 50
+    maxBonus: 150
+    minXpBonus: 20
+    maxXpBonus: 50
+    goal:
+      timeOneStar: 120
+      timeTwoStar: 180
+      timeThreeStar: 300
+    waveCtrFb: {fileID: 6465549134708065180, guid: 24648ad91491be041831210326a571ef, type: 3}
+    mapFb: {fileID: 5905604853909851473, guid: 9505d61b666b34b49b111ff6eb9d9671, type: 3}
+  - minBonus: 80
+    maxBonus: 180
+    minXpBonus: 35
+    maxXpBonus: 65
+    goal:
+      timeOneStar: 180
+      timeTwoStar: 240
+      timeThreeStar: 360
+    waveCtrFb: {fileID: 6465549134708065180, guid: 1ef52eb4de0d0ec44bc7fffeb3f1906e, type: 3}
+    mapFb: {fileID: 4644012095056074382, guid: 5dfc3a68efe19784abb5be0a2e38b45f, type: 3}
+  - minBonus: 100
+    maxBonus: 225
+    minXpBonus: 50
+    maxXpBonus: 80
+    goal:
+      timeOneStar: 240
+      timeTwoStar: 400
+      timeThreeStar: 500
+    waveCtrFb: {fileID: 6465549134708065180, guid: d555b045f6f1fda4188de8be0fe70498, type: 3}
+    mapFb: {fileID: 8227238288947708385, guid: 14250786459b6a546a6bb058c7f040db, type: 3}
+  - minBonus: 300
+    maxBonus: 800
+    minXpBonus: 80
+    maxXpBonus: 150
+    goal:
+      timeOneStar: 500
+      timeTwoStar: 700
+      timeThreeStar: 1000
+    waveCtrFb: {fileID: 6465549134708065180, guid: 5f54a84e99f77f34db412b93a52ff519, type: 3}
+    mapFb: {fileID: 7885089089803689117, guid: aa1119cfd316f8842aca29d619a26929, type: 3}
+  - minBonus: 800
+    maxBonus: 2000
+    minXpBonus: 300
+    maxXpBonus: 800
+    goal:
+      timeOneStar: 1000
+      timeTwoStar: 2000
+      timeThreeStar: 3000
+    waveCtrFb: {fileID: 6465549134708065180, guid: ed5be0a68b899ad48ac96ac8f083340a, type: 3}
+    mapFb: {fileID: 668668958319841440, guid: 600ddcbd86f74c440b9babfa21fa7664, type: 3}
 --- !u!1 &172900390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,3 +2266,4 @@ SceneRoots:
   - {fileID: 1926005315}
   - {fileID: 770684238}
   - {fileID: 1732062544}
+  - {fileID: 108025598}

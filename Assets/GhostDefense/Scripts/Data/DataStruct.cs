@@ -87,4 +87,40 @@ namespace UDEV.GhostDefense
         public Player heroPb;
     }
 
+    [System.Serializable]
+    public class LevelItem
+    {
+        public int minBonus;
+        public int maxBonus;
+        public int minXpBonus;
+        public int maxXpBonus;
+        public Goal goal;
+        public WavePlayer waveCtrFb;
+        public FreeParallax mapFb;
+    }
+
+    [System.Serializable]
+    public class Goal
+    {
+        public int timeOneStar;
+        public int timeTwoStar;
+        public int timeThreeStar;
+
+        public int GetStar(int time)
+        {
+            if (time < timeOneStar)
+            {
+                return 3;
+            }
+            else if (time < timeTwoStar)
+            {
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+    }
+
 }
