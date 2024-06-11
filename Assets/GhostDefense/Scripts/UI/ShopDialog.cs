@@ -63,87 +63,84 @@ namespace UDEV.GhostDefense
 
             if (m_items == null || m_items.Length <= 0) return;
 
-            for (int i = 0; i < m_items.Length; i++)
+            var item = m_items[m_curPlayerId];
+
+            if (item == null) return;
+
+            if (item.heroPb && item.heroPb.stat)
             {
-                var item = m_items[m_curPlayerId];
-
-                if (item == null) continue;
-
-                if (item.heroPb && item.heroPb.stat)
-                {
-                    m_curStat = (PlayerStat)item.heroPb.stat;
-                    m_curStat.Load(m_curPlayerId);
-                }
-
-                if (heroPreview)
-                {
-                    heroPreview.sprite = item.preview;
-                }
-
-                if (heroNameTxt)
-                {
-                    heroNameTxt.text = item.heroName;
-                }
-
-                if (heroAvata)
-                {
-                    heroAvata.sprite = item.avata;
-                }
-
-                if (levelFilled)
-                {
-                    levelFilled.fillAmount = m_curStat.xp / m_curStat.lvUpXpRequired;
-                }
-
-                if (lvProgTxt)
-                {
-                    lvProgTxt.text = (Mathf.RoundToInt(m_curStat.xp / m_curStat.lvUpXpRequired * 100)) + "%";
-                }
-
-                if (lvCountingTxt)
-                {
-                    lvCountingTxt.text = $"Level {m_curStat.playerLevel}";
-                }
-
-                if (pointTxt)
-                {
-                    pointTxt.text = $"{m_curStat.point} Point";
-                }
-
-                if (hpFilled)
-                {
-                    hpFilled.fillAmount = m_curStat.hp / m_curStat.MaxHp;
-                }
-
-                if (atkFilled)
-                {
-                    atkFilled.fillAmount = m_curStat.damage / m_curStat.MaxDmg;
-                }
-
-                if (defFilled)
-                {
-                    defFilled.fillAmount = m_curStat.defense / m_curStat.MaxDef;
-                }
-
-                if (luckFilled)
-                {
-                    luckFilled.fillAmount = m_curStat.luck / m_curStat.MaxLuck;
-                }
-
-                if (unlockBtn)
-                {
-                    unlockBtn.gameObject.SetActive(!isUnlocked);
-                    unlockBtn.onClick.RemoveAllListeners();
-                    unlockBtn.onClick.AddListener(() => unlockHero(item));
-                }
-
-                if (upgradeBtn)
-                {
-                    upgradeBtn.gameObject.SetActive(isUnlocked);
-                }
-
-                //cap nhat coin & point o giao dien gameplay;
+                m_curStat = (PlayerStat)item.heroPb.stat;
+                m_curStat.Load(m_curPlayerId);
             }
+
+            if (heroPreview)
+            {
+                heroPreview.sprite = item.preview;
+            }
+
+            if (heroNameTxt)
+            {
+                heroNameTxt.text = item.heroName;
+            }
+
+            if (heroAvata)
+            {
+                heroAvata.sprite = item.avata;
+            }
+
+            if (levelFilled)
+            {
+                levelFilled.fillAmount = m_curStat.xp / m_curStat.lvUpXpRequired;
+            }
+
+            if (lvProgTxt)
+            {
+                lvProgTxt.text = (Mathf.RoundToInt(m_curStat.xp / m_curStat.lvUpXpRequired * 100)) + "%";
+            }
+
+            if (lvCountingTxt)
+            {
+                lvCountingTxt.text = $"Level {m_curStat.playerLevel}";
+            }
+
+            if (pointTxt)
+            {
+                pointTxt.text = $"{m_curStat.point} Point";
+            }
+
+            if (hpFilled)
+            {
+                hpFilled.fillAmount = m_curStat.hp / m_curStat.MaxHp;
+            }
+
+            if (atkFilled)
+            {
+                atkFilled.fillAmount = m_curStat.damage / m_curStat.MaxDmg;
+            }
+
+            if (defFilled)
+            {
+                defFilled.fillAmount = m_curStat.defense / m_curStat.MaxDef;
+            }
+
+            if (luckFilled)
+            {
+                luckFilled.fillAmount = m_curStat.luck / m_curStat.MaxLuck;
+            }
+
+            if (unlockBtn)
+            {
+                unlockBtn.gameObject.SetActive(!isUnlocked);
+                unlockBtn.onClick.RemoveAllListeners();
+                unlockBtn.onClick.AddListener(() => unlockHero(item));
+            }
+
+            if (upgradeBtn)
+            {
+                upgradeBtn.gameObject.SetActive(isUnlocked);
+            }
+
+            //cap nhat coin & point o giao dien gameplay;
         }
 
         private void unlockHero(ShopItem item)

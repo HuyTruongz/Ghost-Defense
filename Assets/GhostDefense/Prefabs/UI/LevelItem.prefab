@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5751186036540139284}
   - component: {fileID: 7010028738377010752}
   - component: {fileID: 9018758405985847690}
+  - component: {fileID: 2330142282472524593}
   m_Layer: 5
   m_Name: LevelItem
   m_TagString: Untagged
@@ -123,6 +124,27 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2330142282472524593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287294333162131556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e739975c85153cd4282c306613374242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTxt: {fileID: 979785555291106991}
+  lockeIcon: {fileID: 6347291111723403545}
+  starImgs:
+  - {fileID: 1368102695166537356}
+  - {fileID: 6950632752531791326}
+  - {fileID: 7822207235067889181}
+  btnComp: {fileID: 9018758405985847690}
+  activeStar: {fileID: 3340586021387368687, guid: 568c832e0307669488c6cabd7a3cf9a2, type: 3}
+  deactiveStar: {fileID: -598372708251995717, guid: 568c832e0307669488c6cabd7a3cf9a2, type: 3}
 --- !u!1 &392462599700863906
 GameObject:
   m_ObjectHideFlags: 0
