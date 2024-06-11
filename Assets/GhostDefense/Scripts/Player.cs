@@ -76,7 +76,7 @@ namespace UDEV.GhostDefense
             m_prevState = PlayerSate.Idle;
         }
 
-        private void LoadStat()
+        public void LoadStat()
         {
             if (!m_curStat) return;
 

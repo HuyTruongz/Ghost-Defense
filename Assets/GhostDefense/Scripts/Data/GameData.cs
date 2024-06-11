@@ -59,7 +59,7 @@ namespace UDEV.GhostDefense
         {
             if (dataList == null) return;
 
-            if (dataList.Count <= 0 || (dataList.Count > 0 && idx > dataList.Count))
+            if (dataList.Count <= 0 || (dataList.Count > 0 && idx >= dataList.Count))
             {
                 dataList.Add(value);
             }

@@ -728,7 +728,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 539210269902029064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4535455249549103475}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.ShopDialog, Assembly-CSharp
+        m_MethodName: PrevHero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1105412506170273343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1118,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 648411248067230874}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4535455249549103475}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.ShopDialog, Assembly-CSharp
+        m_MethodName: UpgradeHero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1430545535294687174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,10 +1598,10 @@ RectTransform:
   - {fileID: 4154786547805579905}
   m_Father: {fileID: 3398352684282396029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 362.5, y: -50}
+  m_SizeDelta: {x: 725, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1648543446356426197
 CanvasRenderer:
@@ -1715,10 +1739,10 @@ RectTransform:
   - {fileID: 7638326984185850764}
   m_Father: {fileID: 3398352684282396029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 362.5, y: -300}
+  m_SizeDelta: {x: 725, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &442086115081256617
 CanvasRenderer:
@@ -1918,7 +1942,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 725, y: 475}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2244969786555964258
 CanvasRenderer:
@@ -3129,7 +3153,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7691170368079585075}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4535455249549103475}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.ShopDialog, Assembly-CSharp
+        m_MethodName: NextHero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5588030055325750171
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,13 +3332,14 @@ GameObject:
   - component: {fileID: 2086064281775003355}
   - component: {fileID: 5828883648999137681}
   - component: {fileID: 4816654180279502203}
+  - component: {fileID: 4535455249549103475}
   m_Layer: 5
   m_Name: HeroSelectionDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2086064281775003355
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3362,6 +3399,40 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4535455249549103475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371674445171783545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90abc24c027baa14db1f6a5813dd1b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 0}
+  contentText: {fileID: 0}
+  totalCoinTxt: {fileID: 5253624978152853965}
+  heroPreview: {fileID: 1362690139313274090}
+  heroNameTxt: {fileID: 3347965655538300698}
+  heroAvata: {fileID: 1078926262077673034}
+  levelFilled: {fileID: 0}
+  lvProgTxt: {fileID: 8336430931832537372}
+  lvCountingTxt: {fileID: 8002096982752719745}
+  pointTxt: {fileID: 1853810080644020049}
+  hpFilled: {fileID: 5625903554604016638}
+  atkFilled: {fileID: 6447027271371171760}
+  defFilled: {fileID: 7641622452542349173}
+  luckFilled: {fileID: 9160355746860869582}
+  unlockBtn: {fileID: 6140686137083534433}
+  upgradeBtn: {fileID: 1686637954271451212}
+  unlockBtnTxt: {fileID: 1549092721665186599}
+  upgradeBtnTxt: {fileID: 8585790958503996870}
+  nextBtnImg: {fileID: 7691170368079585075}
+  prevBtnImg: {fileID: 539210269902029064}
+  navBtnNormal: {fileID: 6057466800865721946, guid: d39546144765a2546939314ce84f1823, type: 3}
+  navBtnActive: {fileID: 3036216510897660957, guid: d39546144765a2546939314ce84f1823, type: 3}
 --- !u!1 &6418497471827645031
 GameObject:
   m_ObjectHideFlags: 0
@@ -4311,7 +4382,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4930463643536149299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4535455249549103475}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.ShopDialog, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7738715557354079379
 GameObject:
   m_ObjectHideFlags: 0
@@ -4565,10 +4648,10 @@ RectTransform:
   - {fileID: 5543133630331815458}
   m_Father: {fileID: 3398352684282396029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 362.5, y: -175}
+  m_SizeDelta: {x: 725, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1991008133625606532
 CanvasRenderer:
@@ -5438,10 +5521,10 @@ RectTransform:
   - {fileID: 2644688163319487479}
   m_Father: {fileID: 3398352684282396029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 362.5, y: -425}
+  m_SizeDelta: {x: 725, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8020079569404351886
 CanvasRenderer:
