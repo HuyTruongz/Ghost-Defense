@@ -68,6 +68,12 @@ public class AI : Actor
 
     private void Update()
     {
+        if (!m_player)
+        {
+            m_player = GameManager.Ins.Player;
+            return;
+        }
+
         ActionHandle();
 
         if (m_healthBar)
