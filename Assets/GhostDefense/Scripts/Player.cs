@@ -66,6 +66,12 @@ namespace UDEV.GhostDefense
 
         private void Update()
         {
+            LimitHozMoving();
+            if(m_isInvincible || m_isKnockBack)
+            {
+                float mapSpeed = m_isFacingLeft ? m_curStat.knockbackForce : -m_curStat.knockbackForce;
+                GameManager.Ins.SetMapSpeed(mapSpeed);
+            }
             ActionHandle();
         }
         public override void Init()
@@ -99,6 +105,7 @@ namespace UDEV.GhostDefense
                 m_curSpeed = 0f;
                 if (!m_isInvincible)
                 {
+                    GameManager.Ins.SetMapSpeed(0);
                     ChangState(PlayerSate.Idle);
                 }
             }
@@ -141,6 +148,15 @@ namespace UDEV.GhostDefense
                 else
                 {
                     m_rb.velocity = new Vector2(m_hozDir * m_curSpeed, m_rb.velocity.y);
+                }
+
+                if (CameraFollow.ins.IsHozStuck)
+                {
+                    GameManager.Ins.SetMapSpeed(0);
+                }
+                else
+                {
+                    GameManager.Ins.SetMapSpeed(-m_hozDir * CurSpeed);
                 }
             }
         }
@@ -320,11 +336,12 @@ namespace UDEV.GhostDefense
         private void Dead_Enter()
         {
             ActiveCol(PlayerCollider.Dead);
-            //Shake (Rung) camera
+            CamShake.ins.ShakeTrigger(0.2f,0.2f);
         }
         private void Dead_Update()
         {
             gameObject.layer = deadLayer;
+            GameManager.Ins.SetMapSpeed(0);
             Helper.PlayAnim(m_amin, PlayerSate.Dead.ToString());
         }
         private void Dead_FixedUpdate() { }

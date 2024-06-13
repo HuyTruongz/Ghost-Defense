@@ -9,7 +9,6 @@ namespace UDEV.GhostDefense
     public class GameManager : Singleton<GameManager>
     {
         public GamePlaySetting setting;
-        [SerializeField]
         private Player m_player;
         private FreeParallax m_map;
         private WavePlayer m_waveCtr;
@@ -53,7 +52,7 @@ namespace UDEV.GhostDefense
             m_missionXpBonus = Random.Range(m_curLevel.minXpBonus,m_curLevel.maxXpBonus);
             if (m_curLevel.mapFb)
             {
-                Instantiate(m_curLevel.mapFb,Vector3.zero,Quaternion.identity);
+               m_map = Instantiate(m_curLevel.mapFb,Vector3.zero,Quaternion.identity);
             }
 
             ChangePlayer();
