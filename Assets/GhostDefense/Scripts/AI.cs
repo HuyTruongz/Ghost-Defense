@@ -113,6 +113,11 @@ public class AI : Actor
         {
             Flip(Direction.Left);
         }
+
+        if (IsBoss)
+        {
+            GUIManager.Ins.bossHpBar.UpdateValue(m_curHp,m_curStat.CurHp);
+        }
     }
 
     protected void FSMInit(MonoBehaviour behaviour)
@@ -147,6 +152,12 @@ public class AI : Actor
         m_prevState = m_fsm.State;
 
         CreateHealthBarUI();
+
+        if (IsBoss)
+        {
+            GUIManager.Ins.bossHpBar.Show(true);
+            GUIManager.Ins.bossHpBar.UpdateValue(m_curHp,m_curStat.CurHp);
+        }
         
     }
 
@@ -306,7 +317,10 @@ public class AI : Actor
     {
         GetActionRate();
     }
-    private void GotHit_Enter() { }
+    private void GotHit_Enter()
+    {
+        GUIManager.Ins.dmgTxtMng.Add($"-{m_dmgTaked.ToString("f2")}",transform,"ai_damage");
+    }
     private void GotHit_Update()
     {
         m_rb.velocity = Vector3.zero;
@@ -338,6 +352,14 @@ public class AI : Actor
     {       
         m_player.AddEnergy(m_curStat.EnergyBouns);
         m_player.AddXp(m_curStat.XpBouns);
+
+        WavePlayer waveCtr = GameManager.Ins.WaveCtr;
+
+        if (waveCtr)
+        {
+            waveCtr.AddEnemyKilled(1);
+            GUIManager.Ins.waveBar.UpdateValue(waveCtr.CurrentWave.enemyKilled,waveCtr.CurrentWave.totalEnemy);
+        }
 
         float luckCheking = UnityEngine.Random.Range(0f, 1f);
         if (luckCheking <= m_player.CurStat.luck)

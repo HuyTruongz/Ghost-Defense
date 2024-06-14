@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a8d7d3d48c5d40ac9afa0c055fabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 0
+  rate: 1
   projectilePool: 1715598337:185958:10534
   speed: 10
   firePoint: {fileID: 3582098947426831361}
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f487098744c94204ba4da34f28442edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 1
+  rate: 0.4
   weapon: 1715598567:319552:413022
   targetNum: 5
   targetLayer:

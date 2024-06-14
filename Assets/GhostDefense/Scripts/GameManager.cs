@@ -62,9 +62,9 @@ namespace UDEV.GhostDefense
             m_waveCtr = Instantiate(m_curLevel.waveCtrFb,Vector3.zero,Quaternion.identity);
             m_waveCtr.waveBegins.AddListener(() =>
             {
-                //update wave countingTxt
-                //update wave bar
-                //hide big wave countingtxt
+                GUIManager.Ins.UpdateWaveCounting(m_waveCtr.CurrentWaveIdx + 1,m_waveCtr.WaveSet.Count);
+                GUIManager.Ins.waveBar.UpdateValue(m_waveCtr.CurrentWave.enemyKilled, m_waveCtr.CurrentWave.totalEnemy);
+                GUIManager.Ins.waveCountingTxt.gameObject.SetActive(true);
             });
 
             m_waveCtr.finalWaveComplete.AddListener(() =>
@@ -75,8 +75,8 @@ namespace UDEV.GhostDefense
 
             Pref.SpriteOrder = 0;
 
-            //update coin on gui
-            //Show mobile gamepad gui depend on setting
+            GUIManager.Ins.UpdateCoinCounting();
+            GUIManager.Ins.ShowMobileGamepad(setting.isOnMobile);
             //play background music
         }
 
@@ -91,7 +91,11 @@ namespace UDEV.GhostDefense
             if (shopItem == null) return;
             m_player = Instantiate(shopItem.heroPb, spawnPos, Quaternion.identity);
             m_player.Init();
-            //Update avatar cho hero tren GUI
+            GUIManager.Ins.UpdateHeroAvatar(shopItem.avata);
+            GUIManager.Ins.hpBar.UpdateValue(m_player.CurHp, m_player.CurStat.hp);
+            GUIManager.Ins.energyBar.UpdateValue(m_player.CurEnergy, m_player.CurStat.ultiEnegry);
+            GUIManager.Ins.UpdateHeroPoint(m_player.CurStat.point);
+            GUIManager.Ins.UpdateHeroLevel(m_player.CurStat.playerLevel);
         }
 
         public void AddCoin(int cointoAdd)
@@ -100,7 +104,7 @@ namespace UDEV.GhostDefense
 
             GameData.Ins.coin += cointoAdd;
             GameData.Ins.SaveData();
-            //Update coin GUI
+            GUIManager.Ins.UpdateCoinCounting();
         }
 
         public void AddHp(int hpToAdd)
@@ -108,19 +112,19 @@ namespace UDEV.GhostDefense
             if (!m_player) return;
 
             m_player.CurHp += hpToAdd;
-            //Upadate hp on Gui
+            GUIManager.Ins.hpBar.UpdateValue(m_player.CurHp,m_player.CurStat.hp);
         }
 
         public void Gameover()
         {
             m_fsm.ChangeState(GameState.Gameover);
-            //Hide YouDieTxt on GUI
+            GUIManager.Ins.youDieTxt.gameObject.SetActive(false);
         }
 
         public void MissionCompleted()
         {
             m_fsm.ChangeState(GameState.Wining);
-            //hide misssionconplettxt on gui
+            GUIManager.Ins.missionCompletedTxt.gameObject.SetActive(true);
         }
 
         public void Replay()

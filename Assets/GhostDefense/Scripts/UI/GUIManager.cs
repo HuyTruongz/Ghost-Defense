@@ -74,7 +74,7 @@ namespace UDEV.GhostDefense
             }
         }
 
-        public void UpdateCoinCounting(int coint)
+        public void UpdateCoinCounting()
         {
             UpdateTxt(coinCountingTxt, GameData.Ins.coin.ToString());
         }

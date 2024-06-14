@@ -93,6 +93,8 @@ namespace UDEV.GhostDefense
             m_curDashRate = m_curStat.dashRate;
             m_curAttackRate = m_curStat.atkRate;
             m_curEnergy = m_curStat.ultiEnegry;
+
+      
         }
 
         private void ActionHandle()
@@ -128,6 +130,9 @@ namespace UDEV.GhostDefense
             ReduceActionRate(ref m_isDashed,ref m_curDashRate, m_curStat.dashRate);
             ReduceActionRate(ref m_isAttacked,ref m_curAttackRate, m_curStat.atkRate);
 
+            GUIManager.Ins.atkBtnFilled.UpdateValue(m_curAttackRate,m_curStat.atkRate);
+            GUIManager.Ins.dashBtnFilled.UpdateValue(m_curDashRate,m_curStat.dashRate);
+            GUIManager.Ins.ultiBtnFilled.UpdateValue(m_curEnergy,m_curStat.ultiEnegry);
         }
 
         private void Move(Direction dir)
@@ -235,6 +240,8 @@ namespace UDEV.GhostDefense
             {
                 ChangState(PlayerSate.GotHit);
             }
+
+            GUIManager.Ins.hpBar.UpdateValue(m_curHp, m_curStat.hp);
         }
 
         public void AddXp(float xp)
@@ -245,12 +252,21 @@ namespace UDEV.GhostDefense
                 () =>
                 {
                     m_curHp = m_curStat.hp;
+
+                    GUIManager.Ins.dmgTxtMng.Add("Level Up",transform,"level_up");
+                    GUIManager.Ins.UpdateHeroLevel(m_curStat.playerLevel);
+                    GUIManager.Ins.UpdateHeroPoint(m_curStat.point);
+                    GUIManager.Ins.hpBar.UpdateValue(m_curHp,m_curStat.hp);
+
+                    //play sound effect
                 }));
         }
 
         public void AddEnergy(float energyBouns)
         {
             m_curEnergy += energyBouns;
+            GUIManager.Ins.ultiBtnFilled.UpdateValue(m_curEnergy,m_curStat.ultiEnegry);
+            GUIManager.Ins.energyBar.UpdateValue(m_curEnergy, m_curStat.ultiEnegry);
         }
 
         private void OnCollisionEnter2D(Collision2D col)
@@ -361,6 +377,8 @@ namespace UDEV.GhostDefense
             m_curEnergy -= m_curStat.ultiEnegry;
             m_curDmg = m_curStat.damage + m_curStat.damage * 0.3f;
             ChangeStatDalay(PlayerSate.Idle);
+
+            GUIManager.Ins.energyBar.UpdateValue(m_curEnergy, m_curStat.ultiEnegry);
         }
         private void Ultimate_Update()
         {

@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a8d7d3d48c5d40ac9afa0c055fabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 0
+  rate: 1
   projectilePool: 1715598320:40389:547877
   speed: 10
   firePoint: {fileID: 3733628473188680937}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 467bf9627d27e444f9ab772cc9c966c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 1
+  rate: 0.4
   weapon: 1715598543:37343:278543
   createPoint: {fileID: 1256280634115215637}
 --- !u!1 &6773627784427247878
