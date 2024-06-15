@@ -164,7 +164,10 @@ namespace UDEV.GhostDefense
                 GameData.Ins.SaveData();
                 UpdateUI();
 
-                //cap nhat coi o giao dien gameplay
+                if (GameManager.Ins)
+                {
+                    GameManager.Ins.ChangePlayer();
+                }
                 //phat am thanh
             }
         }
@@ -177,7 +180,10 @@ namespace UDEV.GhostDefense
                 () =>
                 {
                     UpdateUI();
-                    GameManager.Ins.Player.LoadStat();
+                    if (GameManager.Ins && GameManager.Ins.Player)
+                    {
+                        GameManager.Ins.Player.LoadStat();
+                    }
                     //phat am thanh
                 }
                 );
@@ -204,7 +210,10 @@ namespace UDEV.GhostDefense
             {
                 GameData.Ins.curPlayerId = m_curPlayerId;
                 GameData.Ins.SaveData();
-                //goi phuong thuc thay doi player trong gamemanager
+                if (GameManager.Ins)
+                {
+                    GameManager.Ins.ChangePlayer();
+                }
             }
             UpdateUI();
         }
