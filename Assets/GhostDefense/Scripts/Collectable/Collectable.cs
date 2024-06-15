@@ -43,7 +43,7 @@ namespace UDEV.GhostDefense
 
             m_rb.velocity = new Vector2(randForce, randForce);
 
-            StopCoroutine(StopMove());
+            StartCoroutine(StopMove());
 
             m_flashVfx.OnCompleted.RemoveAllListeners();
             m_flashVfx.OnCompleted.AddListener(() =>

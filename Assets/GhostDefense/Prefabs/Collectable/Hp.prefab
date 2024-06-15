@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cced45121961a1341a4b234f4ede9c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minBonus: 0
-  maxBonus: 0
+  minBonus: 5
+  maxBonus: 15
   lifeTime: 5
   spawnPos: 8
   hitSound: {fileID: 0}

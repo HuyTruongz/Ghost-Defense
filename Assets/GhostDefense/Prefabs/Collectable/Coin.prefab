@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5995384613732992492}
   - component: {fileID: 7681218746279744284}
   - component: {fileID: 1347628682664988935}
-  - component: {fileID: -1302777881051467287}
   - component: {fileID: 6137172737524034219}
+  - component: {fileID: -4629614519688432440}
   m_Layer: 10
   m_Name: Coin
   m_TagString: Collectable
@@ -98,24 +98,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-1302777881051467287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783160255678758965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3309151775671a4ba5b3a35c03fb3d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minBonus: 0
-  maxBonus: 0
-  lifeTime: 5
-  spawnPos: 8
-  hitSound: {fileID: 0}
-  deactiveWhenHitted: 0
 --- !u!114 &6137172737524034219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +118,24 @@ MonoBehaviour:
   OnCompleted:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-4629614519688432440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783160255678758965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be97c30d73e95549907ac4c566e74fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minBonus: 2
+  maxBonus: 10
+  lifeTime: 5
+  spawnPos: 8
+  hitSound: {fileID: 0}
+  deactiveWhenHitted: 0
 --- !u!1 &8200035057802494996
 GameObject:
   m_ObjectHideFlags: 0
