@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 15004869}
   - component: {fileID: 15004871}
   - component: {fileID: 15004870}
+  - component: {fileID: 15004872}
   m_Layer: 5
   m_Name: Star_L
   m_TagString: Untagged
@@ -198,6 +199,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15004868}
   m_CullTransparentMesh: 1
+--- !u!95 &15004872
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15004868}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3ebf0f38910e6d41b5f3797430925c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &34142639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,7 +1883,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 423504604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1769989944}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.LevleCompletedDialog, Assembly-CSharp
+        m_MethodName: NextLevle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &423504604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2151,7 +2185,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 443254247}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1460976907}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.LevelDialog, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &443254247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2201,6 +2247,7 @@ GameObject:
   - component: {fileID: 467587692}
   - component: {fileID: 467587694}
   - component: {fileID: 467587693}
+  - component: {fileID: 467587695}
   m_Layer: 5
   m_Name: Star_M
   m_TagString: Untagged
@@ -2265,6 +2312,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467587691}
   m_CullTransparentMesh: 1
+--- !u!95 &467587695
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467587691}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3ebf0f38910e6d41b5f3797430925c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &478408723
 GameObject:
   m_ObjectHideFlags: 0
@@ -3228,6 +3296,7 @@ GameObject:
   - component: {fileID: 702565837}
   - component: {fileID: 702565839}
   - component: {fileID: 702565838}
+  - component: {fileID: 702565840}
   m_Layer: 5
   m_Name: Star_L
   m_TagString: Untagged
@@ -3292,6 +3361,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702565836}
   m_CullTransparentMesh: 1
+--- !u!95 &702565840
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702565836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3ebf0f38910e6d41b5f3797430925c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &717577049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,6 +3725,7 @@ GameObject:
   - component: {fileID: 804117028}
   - component: {fileID: 804117030}
   - component: {fileID: 804117029}
+  - component: {fileID: 804117031}
   m_Layer: 5
   m_Name: Star_R
   m_TagString: Untagged
@@ -3699,6 +3790,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804117027}
   m_CullTransparentMesh: 1
+--- !u!95 &804117031
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804117027}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3ebf0f38910e6d41b5f3797430925c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &807422886
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,6 +6477,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4095566949118939158, guid: ad78fcc444c4baa4f99d5b0198e49c23, type: 3}
   m_PrefabInstance: {fileID: 1460976905}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1460976907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3145425064297675449, guid: ad78fcc444c4baa4f99d5b0198e49c23, type: 3}
+  m_PrefabInstance: {fileID: 1460976905}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c01573f11e7894e973cfc755bbd5e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1521003707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6967,6 +7090,7 @@ GameObject:
   - component: {fileID: 1769989941}
   - component: {fileID: 1769989943}
   - component: {fileID: 1769989942}
+  - component: {fileID: 1769989944}
   m_Layer: 5
   m_Name: CompletedDialog
   m_TagString: Untagged
@@ -7032,6 +7156,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769989940}
   m_CullTransparentMesh: 1
+--- !u!114 &1769989944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769989940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2ce3e2613edb140a9a84ee3af228d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 0}
+  contentText: {fileID: 0}
+  stars:
+  - {fileID: 15004870}
+  - {fileID: 467587693}
+  - {fileID: 804117029}
+  gameplayTimeTxt: {fileID: 1654052772}
+  bonusTxt: {fileID: 1405967929}
+  activeStar: {fileID: 3340586021387368687, guid: 568c832e0307669488c6cabd7a3cf9a2, type: 3}
+  deactiveStar: {fileID: -598372708251995717, guid: 568c832e0307669488c6cabd7a3cf9a2, type: 3}
 --- !u!1001 &1770373777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7746,7 +7892,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1885897244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1769989944}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.LevleCompletedDialog, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1885897244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7877,7 +8035,7 @@ MonoBehaviour:
   missionCompletedTxt: {fileID: 1424791392}
   youDieTxt: {fileID: 522196887}
   coinMovingDest: {fileID: 2104864157}
-  completedDialog: {fileID: 0}
+  completedDialog: {fileID: 1769989944}
   gameoverDialog: {fileID: 0}
 --- !u!4 &1892684286
 Transform:
@@ -8171,6 +8329,7 @@ GameObject:
   - component: {fileID: 2000746837}
   - component: {fileID: 2000746839}
   - component: {fileID: 2000746838}
+  - component: {fileID: 2000746840}
   m_Layer: 5
   m_Name: Star_R
   m_TagString: Untagged
@@ -8235,6 +8394,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000746836}
   m_CullTransparentMesh: 1
+--- !u!95 &2000746840
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000746836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3ebf0f38910e6d41b5f3797430925c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2014217561
 GameObject:
   m_ObjectHideFlags: 0
@@ -8376,6 +8556,7 @@ GameObject:
   - component: {fileID: 2027630992}
   - component: {fileID: 2027630994}
   - component: {fileID: 2027630993}
+  - component: {fileID: 2027630995}
   m_Layer: 5
   m_Name: Star_M
   m_TagString: Untagged
@@ -8440,6 +8621,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027630991}
   m_CullTransparentMesh: 1
+--- !u!95 &2027630995
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027630991}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3ebf0f38910e6d41b5f3797430925c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2050725464
 GameObject:
   m_ObjectHideFlags: 0
