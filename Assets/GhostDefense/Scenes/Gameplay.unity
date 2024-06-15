@@ -749,7 +749,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 83406957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1460976907}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.LevelDialog, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &83406957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3393,6 +3405,7 @@ GameObject:
   - component: {fileID: 717577050}
   - component: {fileID: 717577052}
   - component: {fileID: 717577051}
+  - component: {fileID: 717577053}
   m_Layer: 5
   m_Name: FailedDialog
   m_TagString: Untagged
@@ -3458,6 +3471,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717577049}
   m_CullTransparentMesh: 1
+--- !u!114 &717577053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717577049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21de0fc986e40a744a3c2e090dfe1065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 0}
+  contentText: {fileID: 0}
+  gameplayTimeTxt: {fileID: 1065965122}
+  bestTimeTxt: {fileID: 1908487394}
 --- !u!1 &728974928
 GameObject:
   m_ObjectHideFlags: 0
@@ -4014,7 +4043,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 823165018}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 717577053}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.GameOverDialog, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &823165018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8036,7 +8077,7 @@ MonoBehaviour:
   youDieTxt: {fileID: 522196887}
   coinMovingDest: {fileID: 2104864157}
   completedDialog: {fileID: 1769989944}
-  gameoverDialog: {fileID: 0}
+  gameoverDialog: {fileID: 717577053}
 --- !u!4 &1892684286
 Transform:
   m_ObjectHideFlags: 0

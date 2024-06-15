@@ -80,7 +80,7 @@ namespace UDEV.SPM
                 }
 
                 var findeds = pooledObjects.Where(
-                    p => string.Compare(p.GetComponent<Pooler>().id, pools[pool].id) == 0).ToList();
+                    p => p && string.Compare(p.GetComponent<Pooler>().id, pools[pool].id) == 0).ToList();
                 
                 if(findeds != null && findeds.Count > 0)
                 {

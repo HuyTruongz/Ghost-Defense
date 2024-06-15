@@ -352,6 +352,7 @@ namespace UDEV.GhostDefense
         private void Dead_Enter()
         {
             ActiveCol(PlayerCollider.Dead);
+            GameManager.Ins.Gameover();
             CamShake.ins.ShakeTrigger(0.2f,0.2f);
         }
         private void Dead_Update()

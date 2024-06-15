@@ -118,7 +118,7 @@ namespace UDEV.GhostDefense
         public void Gameover()
         {
             m_fsm.ChangeState(GameState.Gameover);
-            GUIManager.Ins.youDieTxt.gameObject.SetActive(false);
+            GUIManager.Ins.youDieTxt.gameObject.SetActive(true);
         }
 
         public void MissionCompleted()
