@@ -2522,6 +2522,7 @@ GameObject:
   - component: {fileID: 522196887}
   - component: {fileID: 522196886}
   - component: {fileID: 522196889}
+  - component: {fileID: 522196890}
   m_Layer: 5
   m_Name: YouDieTxt
   m_TagString: Untagged
@@ -2626,6 +2627,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &522196890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522196884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdcf22f98cddf44682f2d5c1e077b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &537895985
 GameObject:
   m_ObjectHideFlags: 0
@@ -5596,6 +5609,7 @@ GameObject:
   - component: {fileID: 1424791392}
   - component: {fileID: 1424791391}
   - component: {fileID: 1424791394}
+  - component: {fileID: 1424791395}
   m_Layer: 5
   m_Name: MissonCompleted
   m_TagString: Untagged
@@ -5700,6 +5714,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1424791395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424791389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdcf22f98cddf44682f2d5c1e077b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1438649834
 GameObject:
   m_ObjectHideFlags: 0
@@ -7851,6 +7877,8 @@ MonoBehaviour:
   missionCompletedTxt: {fileID: 1424791392}
   youDieTxt: {fileID: 522196887}
   coinMovingDest: {fileID: 2104864157}
+  completedDialog: {fileID: 0}
+  gameoverDialog: {fileID: 0}
 --- !u!4 &1892684286
 Transform:
   m_ObjectHideFlags: 0
@@ -8220,6 +8248,7 @@ GameObject:
   - component: {fileID: 2014217563}
   - component: {fileID: 2014217565}
   - component: {fileID: 2014217566}
+  - component: {fileID: 2014217567}
   m_Layer: 5
   m_Name: WaveCountingTxt
   m_TagString: Untagged
@@ -8324,6 +8353,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2014217567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014217561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdcf22f98cddf44682f2d5c1e077b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2027630991
 GameObject:
   m_ObjectHideFlags: 0

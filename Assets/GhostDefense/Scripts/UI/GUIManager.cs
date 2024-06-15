@@ -35,6 +35,11 @@ namespace UDEV.GhostDefense
         public Text youDieTxt;
         public RectTransform coinMovingDest;
 
+        [Header("Dialog")]
+        public Dialog completedDialog;
+        public Dialog gameoverDialog;
+
+
         public override void Awake()
         {
             MakeSingleton(false);
