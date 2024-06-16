@@ -150,7 +150,7 @@ public class AI : Actor
         GetActionRate();
         m_fsm.ChangeState(AIState.Walk);
         m_prevState = m_fsm.State;
-
+        gameObject.layer = normalLayer;
         CreateHealthBarUI();
 
         if (IsBoss)
