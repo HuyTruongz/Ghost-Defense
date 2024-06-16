@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UDEV.SPM;
+using UDEV.GhostDefense.Editor;
 
 namespace UDEV.GhostDefense
 {
@@ -11,7 +12,11 @@ namespace UDEV.GhostDefense
         public int minBonus;
         public int maxBonus;
         public int lifeTime;
-        public float spawnPos;
+        public float spawnForce;
+        [LayerList]
+        public int collectedLayer;
+        [LayerList]
+        public int normalLayer;
         public AudioClip hitSound;
         public bool deactiveWhenHitted;
 
@@ -31,6 +36,8 @@ namespace UDEV.GhostDefense
 
         public virtual void Init()
         {
+            gameObject.layer = normalLayer;
+
             m_isNotMoving = false;
             m_player = GameManager.Ins.Player;
             m_timeCounting = lifeTime;
@@ -39,7 +46,7 @@ namespace UDEV.GhostDefense
 
             m_bonus = Random.Range(minBonus, maxBonus) * (GameData.Ins.curLevelId + 1);
 
-            float randForce = Random.Range(-spawnPos, spawnPos);
+            float randForce = Random.Range(-spawnForce, spawnForce);
 
             m_rb.velocity = new Vector2(randForce, randForce);
 
@@ -62,6 +69,8 @@ namespace UDEV.GhostDefense
             {
                 gameObject.SetActive(false);
             }
+
+            gameObject.layer = collectedLayer;
         }
 
         protected virtual void TriggerCore()

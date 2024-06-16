@@ -217,6 +217,8 @@ MonoBehaviour:
   minBonus: 10
   maxBonus: 20
   lifeTime: 5
-  spawnPos: 8
+  spawnForce: 0
+  collectedLayer: 11
+  normalLayer: 10
   hitSound: {fileID: 0}
   deactiveWhenHitted: 0

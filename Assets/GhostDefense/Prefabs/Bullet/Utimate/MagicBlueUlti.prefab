@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableOnly: 1
-  delay: 10
+  delay: 0.8
   isOverride: 0
 --- !u!1 &7133639401371792912
 GameObject:

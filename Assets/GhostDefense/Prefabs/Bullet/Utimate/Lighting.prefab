@@ -134,7 +134,7 @@ MonoBehaviour:
   speed: 7
   damage: 0
   deactiveWhenHitted: 1
-  bodyHitPool: 1715598592:733586:538649
+  bodyHitPool: None
   owenr: {fileID: 0}
 --- !u!114 &-1063911447116222740
 MonoBehaviour:
@@ -149,5 +149,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableOnly: 1
-  delay: 10
+  delay: 0.8
   isOverride: 0

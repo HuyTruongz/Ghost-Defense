@@ -446,7 +446,6 @@ GameObject:
   - component: {fileID: 60802850}
   - component: {fileID: 60802852}
   - component: {fileID: 60802851}
-  - component: {fileID: 60802853}
   m_Layer: 5
   m_Name: Filled
   m_TagString: Untagged
@@ -511,22 +510,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60802849}
   m_CullTransparentMesh: 1
---- !u!114 &60802853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60802849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dba7be9b91319b47904f276a6b8bc0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filledImg: {fileID: 60802851}
-  OnComplete:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &61841627
 GameObject:
   m_ObjectHideFlags: 0
@@ -6734,6 +6717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608065574}
   - component: {fileID: 1608065576}
+  - component: {fileID: 1608065577}
   m_Layer: 5
   m_Name: BossHealthBar
   m_TagString: Untagged
@@ -6770,6 +6754,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608065573}
   m_CullTransparentMesh: 1
+--- !u!114 &1608065577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608065573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dba7be9b91319b47904f276a6b8bc0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filledImg: {fileID: 60802851}
+  OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1636883994
 GameObject:
   m_ObjectHideFlags: 0
@@ -8069,7 +8069,7 @@ MonoBehaviour:
   lvCountingTxt: {fileID: 1329860164}
   ptContingTxt: {fileID: 2132466836}
   waveBar: {fileID: 110570884}
-  bossHpBar: {fileID: 60802853}
+  bossHpBar: {fileID: 1608065577}
   waveBarTxt: {fileID: 61841629}
   coinCountingTxt: {fileID: 41711609}
   waveCountingTxt: {fileID: 2014217563}

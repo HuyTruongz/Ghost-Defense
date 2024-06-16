@@ -259,7 +259,7 @@ public class WavePlayer : Singleton<WavePlayer>
             AI ai = aiClone.GetComponent<AI>();
             if (ai)
             {
-                //ai.isBoss = isBoss;
+                ai.IsBoss = isBoss;
                 ai.Init();
             }
         }
