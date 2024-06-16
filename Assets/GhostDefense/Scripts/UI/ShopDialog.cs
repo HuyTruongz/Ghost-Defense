@@ -100,7 +100,7 @@ namespace UDEV.GhostDefense
 
             if (lvCountingTxt)
             {
-                lvCountingTxt.text = $"Level {m_curStat.playerLevel}";
+                lvCountingTxt.text = $"Level {m_curStat.level}";
             }
 
             if (pointTxt)
@@ -135,9 +135,19 @@ namespace UDEV.GhostDefense
                 unlockBtn.onClick.AddListener(() => unlockHero(item));
             }
 
+            if (unlockBtnTxt)
+            {
+                unlockBtnTxt.text = item.price.ToString();
+            }
+
             if (upgradeBtn)
             {
                 upgradeBtn.gameObject.SetActive(isUnlocked);
+            }
+
+            if (upgradeBtnTxt)
+            {
+                upgradeBtnTxt.text = $"{m_curStat.pointRequired} PT";
             }
 
             if (GUIManager.Ins && GameManager.Ins)
@@ -184,6 +194,7 @@ namespace UDEV.GhostDefense
                     {
                         GameManager.Ins.Player.LoadStat();
                     }
+                    UpdateUI();
                     //phat am thanh
                 }
                 );

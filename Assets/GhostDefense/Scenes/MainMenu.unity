@@ -1540,7 +1540,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2076998581}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1750383862719795341}
+        m_TargetAssemblyTypeName: UDEV.GhostDefense.Dialog, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2076998581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1795,6 +1807,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fda7512036c36844afed2e64d3c2bca, type: 3}
+--- !u!114 &1750383862719795341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1155128229748681054, guid: 2fda7512036c36844afed2e64d3c2bca, type: 3}
+  m_PrefabInstance: {fileID: 1750383862719795340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f818ea0703fe04a82590b28b502347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2927764713247529871
 PrefabInstance:
   m_ObjectHideFlags: 0

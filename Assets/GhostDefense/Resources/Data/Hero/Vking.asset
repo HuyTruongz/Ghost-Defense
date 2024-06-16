@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Vking
   m_EditorClassIdentifier: 
   id: 1715063131786449995071
-  thumb: {fileID: 7408805090076378756, guid: 1f0e5585efe39e34499c1c3cb1f55f94, type: 3}
+  thumb: {fileID: -3164809056393425246, guid: 2428b9ba3c4f35d4dbda7b0ecf44bf5a, type: 3}
   hp: 50
-  damage: 10
+  damage: 4
   moveSpeed: 4.2
   knockbackForce: 5
   knockbackTime: 0.2
@@ -29,10 +29,10 @@ MonoBehaviour:
   luck: 0.3
   maxLevel: 50
   level: 1
-  playerLevel: 8
-  xp: 217.54782
-  lvUpXpRequired: 250
-  point: 35
+  playerLevel: 1
+  xp: 0
+  lvUpXpRequired: 40
+  point: 0
   xpUpRate: 30
   hpUpRate: 8
   dmgUpRate: 2

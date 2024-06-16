@@ -370,6 +370,10 @@ public class AI : Actor
     private void Dead_Update()
     {
         gameObject.layer = deadLayer;
+        if (m_healthBar)
+        {
+            m_healthBar.Show(false);
+        }
         
         Helper.PlayAnim(m_amin, AIState.Dead.ToString());
     }

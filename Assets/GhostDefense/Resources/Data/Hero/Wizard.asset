@@ -26,11 +26,11 @@ MonoBehaviour:
   dashDist: 3
   ultiEnegry: 30
   defense: 0.2
-  luck: 1
+  luck: 0.4
   maxLevel: 50
   level: 1
   playerLevel: 1
-  xp: 10.778711
+  xp: 0
   lvUpXpRequired: 60
   point: 0
   xpUpRate: 35
