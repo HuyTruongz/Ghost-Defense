@@ -1732,6 +1732,7 @@ GameObject:
   - component: {fileID: 396422219}
   - component: {fileID: 396422221}
   - component: {fileID: 396422220}
+  - component: {fileID: 396422222}
   m_Layer: 5
   m_Name: JoyStick
   m_TagString: Untagged
@@ -1797,6 +1798,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396422218}
   m_CullTransparentMesh: 1
+--- !u!114 &396422222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396422218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d323a53f6599e43a2cc2822b36752d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restriction: 250
+  snapsBack: 1
+  touchArea: {fileID: 1887476449}
+  stick: {fileID: 2135931016}
+  xValue: 0
+  yValue: 0
+  progress: 0
+  isHolding: 0
 --- !u!1 &423504601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,7 +1979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ba95a67d3801548b0552821e9d465d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
+  joystick: {fileID: 396422222}
 --- !u!4 &434332990
 Transform:
   m_ObjectHideFlags: 0
@@ -4428,6 +4449,7 @@ GameObject:
   - component: {fileID: 1054255369}
   - component: {fileID: 1054255371}
   - component: {fileID: 1054255370}
+  - component: {fileID: 1054255372}
   m_Layer: 5
   m_Name: UltimateBtn
   m_TagString: Untagged
@@ -4493,6 +4515,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054255368}
   m_CullTransparentMesh: 1
+--- !u!114 &1054255372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054255368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 434332989}
+          m_TargetAssemblyTypeName: UDEV.GhostDefense.GamepaConreoller, Assembly-CSharp
+          m_MethodName: set_CanUlti
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 434332989}
+          m_TargetAssemblyTypeName: UDEV.GhostDefense.GamepaConreoller, Assembly-CSharp
+          m_MethodName: set_CanUlti
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1059844439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4708,6 +4775,7 @@ GameObject:
   - component: {fileID: 1094836487}
   - component: {fileID: 1094836490}
   - component: {fileID: 1094836489}
+  - component: {fileID: 1094836491}
   m_Layer: 5
   m_Name: AtkBtn
   m_TagString: Untagged
@@ -4773,6 +4841,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094836486}
   m_CullTransparentMesh: 1
+--- !u!114 &1094836491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094836486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 434332989}
+          m_TargetAssemblyTypeName: UDEV.GhostDefense.GamepaConreoller, Assembly-CSharp
+          m_MethodName: set_CanAttack
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 434332989}
+          m_TargetAssemblyTypeName: UDEV.GhostDefense.GamepaConreoller, Assembly-CSharp
+          m_MethodName: set_CanAttack
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1155743740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4904,6 +5017,7 @@ GameObject:
   - component: {fileID: 1187679059}
   - component: {fileID: 1187679061}
   - component: {fileID: 1187679060}
+  - component: {fileID: 1187679062}
   m_Layer: 5
   m_Name: DashBtn
   m_TagString: Untagged
@@ -4969,6 +5083,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187679058}
   m_CullTransparentMesh: 1
+--- !u!114 &1187679062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187679058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 434332989}
+          m_TargetAssemblyTypeName: UDEV.GhostDefense.GamepaConreoller, Assembly-CSharp
+          m_MethodName: set_CanDash
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 434332989}
+          m_TargetAssemblyTypeName: UDEV.GhostDefense.GamepaConreoller, Assembly-CSharp
+          m_MethodName: set_CanDash
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1207730622
 GameObject:
   m_ObjectHideFlags: 0
