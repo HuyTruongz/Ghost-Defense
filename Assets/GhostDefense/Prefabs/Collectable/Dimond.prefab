@@ -220,5 +220,5 @@ MonoBehaviour:
   spawnForce: 0
   collectedLayer: 11
   normalLayer: 10
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 4b38d23d6dc1e1a47af8a0c8bfeaf8e2, type: 3}
   deactiveWhenHitted: 0

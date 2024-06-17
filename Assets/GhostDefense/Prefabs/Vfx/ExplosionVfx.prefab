@@ -172,7 +172,8 @@ MonoBehaviour:
   shakeDur: 0.2
   shakeFreq: 0.2
   shakeAmp: 1
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 0d89d774334a74945a5e8d718c19a559, type: 3}
 --- !u!82 &5487738576588884649
 AudioSource:
   m_ObjectHideFlags: 0
