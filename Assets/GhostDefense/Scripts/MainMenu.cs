@@ -17,8 +17,13 @@ namespace UDEV.GhostDefense
             {
                 ShopManager.Ins.Init();
                 LevelManager.Ins.Init();
+                GameData.Ins.musicVol = AudioController.Ins.musicVolume;
+                GameData.Ins.soundVol = AudioController.Ins.sfxVolume;
                 GameData.Ins.SaveData();
             }
+
+            AudioController.Ins.SetMusicVolume(GameData.Ins.musicVol);
+            AudioController.Ins.SetSoundVolume(GameData.Ins.soundVol);
 
             AudioController.Ins.PlayMusic(AudioController.Ins.menus);
 
