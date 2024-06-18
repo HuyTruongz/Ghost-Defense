@@ -258,7 +258,8 @@ namespace UDEV.GhostDefense
                     GUIManager.Ins.UpdateHeroPoint(m_curStat.point);
                     GUIManager.Ins.hpBar.UpdateValue(m_curHp,m_curStat.hp);
 
-                    //play sound effect
+                    AudioController.Ins.PlaySound(AudioController.Ins.levelUp);
+
                 }));
         }
 
@@ -354,6 +355,8 @@ namespace UDEV.GhostDefense
             ActiveCol(PlayerCollider.Dead);
             GameManager.Ins.Gameover();
             CamShake.ins.ShakeTrigger(0.2f,0.2f);
+            AudioController.Ins.PlaySound(AudioController.Ins.dead);
+
         }
         private void Dead_Update()
         {
@@ -366,6 +369,8 @@ namespace UDEV.GhostDefense
         private void Attack_Enter()
         {
             ChangeStatDalay(PlayerSate.Idle);
+            AudioController.Ins.PlaySound(AudioController.Ins.attack);
+
         }
         private void Attack_Update()
         {
@@ -394,6 +399,9 @@ namespace UDEV.GhostDefense
         {
             AIStat aiStat = (AIStat)m_whoHit.stat;
             AddEnergy(aiStat.EnergyBouns / 5);
+
+            AudioController.Ins.PlaySound(AudioController.Ins.gotHit);
+
         }
         private void GotHit_Update()
         {

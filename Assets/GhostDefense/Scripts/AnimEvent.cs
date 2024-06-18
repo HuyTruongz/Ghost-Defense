@@ -22,6 +22,8 @@ namespace UDEV.GhostDefense
             if (owner)
             {
                 owner.Dash();
+                AudioController.Ins.PlaySound(AudioController.Ins.dash);
+
             }
         }
 
@@ -58,6 +60,7 @@ namespace UDEV.GhostDefense
 
         public void PlayFootstepSound()
         {
+            AudioController.Ins.PlaySound(AudioController.Ins.footSteps);
 
         }
     }

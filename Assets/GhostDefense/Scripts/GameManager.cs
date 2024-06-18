@@ -77,7 +77,9 @@ namespace UDEV.GhostDefense
 
             GUIManager.Ins.UpdateCoinCounting();
             GUIManager.Ins.ShowMobileGamepad(setting.isOnMobile);
-            //play background music
+
+            AudioController.Ins.PlayBackgroundMusic();
+
         }
 
         public void ChangePlayer()
@@ -147,7 +149,7 @@ namespace UDEV.GhostDefense
             CameraFollow.ins.target = m_player.transform;
         }
 
-        #region
+        #region FSM
         private void Starting_Enter() { }
         private void Starting_Update() { }
         private void Starting_Exit() { }
@@ -168,13 +170,16 @@ namespace UDEV.GhostDefense
             GameData.Ins.curLevelId++;
             GameData.Ins.UpdateLevelUnlocked(GameData.Ins.curLevelId,true);
             GameData.Ins.SaveData();
-            //Play winning sound effect
+
+            AudioController.Ins.PlaySound(AudioController.Ins.completed);
+
         }
         private void Wining_Update() { }
         private void Wining_Exit() { }
         private void Gameover_Enter()
         {
-            //play lose sound effect
+            AudioController.Ins.PlaySound(AudioController.Ins.fail);
+
         }
         private void Gameover_Update() { }
         private void Gameover_Exit() { }

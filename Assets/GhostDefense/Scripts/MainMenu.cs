@@ -20,6 +20,8 @@ namespace UDEV.GhostDefense
                 GameData.Ins.SaveData();
             }
 
+            AudioController.Ins.PlayMusic(AudioController.Ins.menus);
+
             Pref.IsFirstTime = false;
         }
 

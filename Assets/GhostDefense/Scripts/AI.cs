@@ -366,6 +366,8 @@ public class AI : Actor
         {
             CollectableManager.Ins.Spawn(transform.position);
         }
+
+        AudioController.Ins.PlaySound(AudioController.Ins.enemyDead);
     }
     private void Dead_Update()
     {

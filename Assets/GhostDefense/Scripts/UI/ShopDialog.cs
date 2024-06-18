@@ -178,7 +178,8 @@ namespace UDEV.GhostDefense
                 {
                     GameManager.Ins.ChangePlayer();
                 }
-                //phat am thanh
+                AudioController.Ins.PlaySound(AudioController.Ins.unlock);
+
             }
         }
 
@@ -195,7 +196,8 @@ namespace UDEV.GhostDefense
                         GameManager.Ins.Player.LoadStat();
                     }
                     UpdateUI();
-                    //phat am thanh
+                    AudioController.Ins.PlaySound(AudioController.Ins.upgrade);
+
                 }
                 );
         }

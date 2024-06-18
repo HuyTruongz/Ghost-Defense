@@ -71,6 +71,8 @@ namespace UDEV.GhostDefense
             }
 
             gameObject.layer = collectedLayer;
+
+            AudioController.Ins.PlaySound(hitSound);
         }
 
         protected virtual void TriggerCore()
