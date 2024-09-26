@@ -98,6 +98,8 @@ namespace UDEV.GhostDefense
             GUIManager.Ins.energyBar.UpdateValue(m_player.CurEnergy, m_player.CurStat.ultiEnegry);
             GUIManager.Ins.UpdateHeroPoint(m_player.CurStat.point);
             GUIManager.Ins.UpdateHeroLevel(m_player.CurStat.playerLevel);
+
+            StartCoroutine(CamFollowDelay());
         }
 
         public void AddCoin(int cointoAdd)
@@ -145,8 +147,15 @@ namespace UDEV.GhostDefense
 
         private IEnumerator CamFollowDelay()
         {
-            yield return new WaitForSeconds(0.3f);
-            CameraFollow.ins.target = m_player.transform;
+            while (!m_player)
+            {
+                yield return new WaitForSeconds(0.05f);
+            }
+
+            if (m_player)
+            {
+                CameraFollow.ins.target = m_player.transform;
+            }
         }
 
         #region FSM

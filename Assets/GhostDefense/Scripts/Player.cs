@@ -67,7 +67,7 @@ namespace UDEV.GhostDefense
         private void Update()
         {
             LimitHozMoving();
-            if(m_isInvincible || m_isKnockBack)
+            if(m_isKnockBack)
             {
                 float mapSpeed = m_isFacingLeft ? m_curStat.knockbackForce : -m_curStat.knockbackForce;
                 GameManager.Ins.SetMapSpeed(mapSpeed);

@@ -13,7 +13,6 @@ namespace UDEV.GhostDefense
         public override void Show(bool isShow)
         {
             base.Show(isShow);
-
             if (gameplayTimeTxt)
             {
                 gameplayTimeTxt.text = Helper.TimeConvert(GameManager.Ins.GplayTimeCounting);
@@ -30,6 +29,12 @@ namespace UDEV.GhostDefense
         {
             Close();
             GameManager.Ins.Replay();
+        }
+
+        public override void Close()
+        {
+            base.Close();
+            Time.timeScale = 1f;
         }
     }
 }
